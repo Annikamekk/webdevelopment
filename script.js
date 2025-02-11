@@ -5,6 +5,8 @@ const myURL = baseURL + endpointMe;
 
 getMyAvatar();
 getMyName();
+getMyImage();
+
 
 let listItem = document.querySelector("header li:nth-of-type(4) img");
 let h1 = document.querySelector("h1");
@@ -35,6 +37,29 @@ function getMyName() {
     });
 }
 
+
+function setFavicon(avatarUrl) {
+    console.log("setFavicon() is aangeroepen!");
+    let link = document.querySelector('link[rel="icon"]');
+
+    if (!link) {
+        console.log("Geen bestaande favicon gevonden, nieuwe aanmaken...");
+        link = document.createElement('link');
+        link.rel = 'icon';
+        link.type = 'image/x-icon';
+        document.head.appendChild(link);
+    } else {
+        console.log("Bestaande favicon gevonden, wordt geüpdatet...");
+    }
+
+    console.log("Nieuwe favicon URL:", avatarUrl);
+    link.href = avatarUrl;
+}
+
+// Roep de functie aan om te testen
+setFavicon("https://example.com/favicon.ico");
+
+
 function setFavicon(avatarUrl) {
     // Maak de <link> tag aan als deze nog niet bestaat
     let link = document.querySelector('link[rel="icon"]');
@@ -48,11 +73,82 @@ function setFavicon(avatarUrl) {
     link.href = avatarUrl;
 }
 
+
 getData(myURL).then(data => {
     const myData = data.data;
     const myAvatar = myData.avatar; // Zorg ervoor dat je de juiste property gebruikt voor de avatar
     setFavicon(myAvatar); // Zet de avatar als de favicon
 });
+
+
+// const myImgDialog = document.querySelector('.dialog-content');
+
+
+getMyImage();
+
+
+// function getMyImage() {
+// 	getData(myURL).then( data => {  
+//     console.log(data.data);
+
+
+// 		const myData = data.data;
+
+//         const customData = JSON.parse(myData.custom);
+
+// 		let myPhotos = myData.custom.photos;
+//         console.log(myPhotos)
+// 	});	
+// }
+
+
+function getMyImage() {
+    getData(myURL).then(data => {
+        // console.log(data.data);
+
+        const myData = data.data;
+
+        // Als custom een string is, moet je het parsen naar een object
+        const customData = JSON.parse(myData.custom);
+
+        // Haal de foto's uit customData
+        let myPhotos = customData.photos;
+        // console.log(myPhotos);
+
+        // Zoek het element in de HTML waar je de foto's wilt plaatsen
+        let photoContainer = document.getElementById('photoContainer');
+        
+        // Zorg ervoor dat de container leeg is voordat je nieuwe foto's toevoegt
+        photoContainer.innerHTML = '';
+
+        // Loop door de foto's en voeg ze toe aan de HTML
+        myPhotos.forEach(photo => {
+            // Maak een nieuw img-element voor elke foto
+            let img = document.createElement('img');
+            img.src = photo.image_url;  // Veronderstel dat elke foto een 'image_url' heeft
+            img.alt = photo.description || 'Photo';  // Beschrijving is optioneel
+
+            // Wacht tot de afbeelding geladen is om te controleren of het landscape of portrait is
+            img.onload = function() {
+                // Controleer de natuurlijke breedte en hoogte van de afbeelding
+                if (img.naturalWidth > img.naturalHeight) {
+                    img.classList.add('landscape'); // Voeg de 'landscape' klasse toe voor horizontale foto's
+                    // Zorg ervoor dat de landscape afbeelding minder ruimte inneemt dan portrait
+                    img.style.gridRowEnd = "span 1"; // Landscape afbeeldingen nemen 1 rij in
+                } else {
+                    img.classList.add('portrait');  // Voeg de 'portrait' klasse toe voor verticale foto's
+                    img.style.gridRowEnd = "span 2"; // Portrait afbeeldingen nemen 2 rijen in
+                }
+            };
+
+            // Voeg de afbeelding toe aan de container
+            photoContainer.appendChild(img);
+        });
+    }).catch(error => {
+        console.error('Er is een fout opgetreden:', error);
+    });
+}
+
 
 // function searchFunction(event) {
 //     event.preventDefault(); // Zorg ervoor dat het formulier niet opnieuw laadt.

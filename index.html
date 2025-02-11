@@ -15,21 +15,26 @@
         <source src="background.MOV" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
-    <p></p>
+    
     <header>
         <ul>
             <li><a href="mailto:annika.mekkelholt@gmail.com">Gmail</a></li>
             <li>
                 <dialog id="Fotos" aria-label="Fotos uit vietnam">
-                    <form class="dialog" id="FotosVietnam" method="dialog">
+                    <form class="dialog1" id="FotosVietnam" method="dialog">
                         <div><button class="closeDialog">Terug</button>
                             <h3>Foto's uit Vietnam</h3>
                         </div>
-                        <img src="" alt="">
+                        <div class="dialog-content">
+                            <div id="photoContainer"></div>
+                            <!-- Dynamisch geladen afbeeldingen komen hier -->
+                        </div>
                     </form>
                 </dialog>
                 <button onclick="document.getElementById('Fotos').showModal()">
-               <p>Images</p></button></li>
+                    <p>Images</p>
+                </button>
+            </li>
             <li><img src="img/More.svg" alt="9 dots"></li>
             <li><img src="" alt=""></li>
         </ul>
@@ -84,7 +89,7 @@
                     <h2>Feitjes</h2>
                 </button>
             </section>
-            <section>
+            <!-- <section>
                 <dialog id="myDialog2" aria-label="interesses die ik heb">
                     <form id="dialog2" method="dialog">
                         <div>
@@ -118,34 +123,17 @@
                     <img src="img/Interesses.jpg" alt="favoriete koffie tentje">
                     <h2>Interesses</h2>
                 </button>
-            </section>
+            </section> -->
             <section>
                 <dialog id="myDialog3" aria-label="mijn tijd in rmit">
                     <form class="dialog" id="dialog3" method="dialog">
                         <div><button class="closeDialog">Terug</button>
                             <h3>Royal Melbourne Institute of Technology</h3>
                         </div>
-                        <h4>Hi, welkom op mijn pagina!</h4>
-                        <p>Mijn naam is Annika en ik ben 20 jaar oud. Ik ben een enorme reisliefhebber en heb bijna heel
-                            Zuidoost-Azië verkend. Mijn laatste avontuur bracht me naar Vietnam, waar ik een semester in
-                            Ho Chi Minh City heb gestudeerd. Het was echt de tijd van mijn leven! </p>
-                        <p>Naast reizen ben ik ook dol op volleybal. Sport houdt me in balans na al die geweldige
-                            reiservaringen en nieuwe culturen ontdekken.</p>
-                        <div>
-                            <img src="img/feitjes.jpgx" alt="ik">
-                            <img src="img/doelen.jpg" alt="hoi">
-                            <img src="img/Interesses.jpg" alt="hio">
-                            <img src="img/Fotos.jpg" alt="fotos">
-                        </div>
                         <section>
-                            <h5>Drie compleet willekeurige feitjes over mij:</h5>
-                            <ul>
-                                <li>Toen ik vier jaar oud was, had ik epilepsie.</li>
-                                <li>Ik heb twee keer mijn haar bruin geverfd. </li>
-                                <li>Net vóór corona ben ik naar Disneyland Parijs geweest… en werd ik direct daarna
-                                    megaziek. </li>
-                            </ul>
-                        </section>
+                             <img src="img/RMIT.png" alt="RMIT logo">
+                            </section>
+                       
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog3').showModal()">
