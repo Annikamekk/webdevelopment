@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' content='Annikas website voor WAFS'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/doghamburger.jpg">
+    <title>Annika WAFS</title>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="background.MOV" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <p></p>
+    <header>
+        <ul>
+            <li><a href="mailto:annika.mekkelholt@gmail.com">Gmail</a></li>
+            <li>
+                <dialog id="Fotos" aria-label="Fotos uit vietnam">
+                    <form class="dialog" id="FotosVietnam" method="dialog">
+                        <div><button class="closeDialog">Terug</button>
+                            <h3>Foto's uit Vietnam</h3>
+                        </div>
+                        <img src="" alt="">
+                    </form>
+                </dialog>
+                <button onclick="document.getElementById('Fotos').showModal()">
+               <p>Images</p></button></li>
+            <li><img src="img/More.svg" alt="9 dots"></li>
+            <li><img src="" alt=""></li>
+        </ul>
+    </header>
+    <main>
+        <h1>
+            Annika
+        </h1>
+        <form id="searchForm" onsubmit="searchFunction(event)">
+            <input type="text" placeholder="Zoek..." required>
+            <button type="submit" id="searchButton"></button>
+        </form>
+        <div>
+            <section>
+                <dialog id="myDialog1" aria-label="meer informatie over mij">
+                    <form class="dialog" id="dialog1" method="dialog">
+                        <div><button class="closeDialog">Terug</button>
+                            <h3>feitjes over mij</h3>
+                        </div>
+                        <h4>Hi, welkom op mijn pagina!</h4>
+                        <p>Mijn naam is Annika en ik ben 20 jaar oud. Ik ben een enorme reisliefhebber en heb bijna heel
+                            Zuidoost-Azië verkend. Mijn laatste avontuur bracht me naar Vietnam, waar ik een semester in
+                            Ho Chi Minh City heb gestudeerd. Het was echt de tijd van mijn leven! </p>
+                        <p>Naast reizen ben ik ook dol op volleybal. Sport houdt me in balans na al die geweldige
+                            reiservaringen en nieuwe culturen ontdekken.</p>
+                        <div>
+                            <img src="img/feitjes.JPG" alt="ik">
+                            <img src="img/doelen.jpg" alt="hoi">
+                            <img src="img/Interesses.JPG" alt="hio">
+                            <img src="img/Fotos.jpg" alt="fotos">
+                        </div>
+                        <div>
+                            <img src="img/feitjes.JPG" alt="ik">
+                            <img src="img/doelen.jpg" alt="hoi">
+                            <img src="img/Interesses.JPG" alt="hio">
+                            <img src="img/Fotos.jpg" alt="fotos">
+                        </div>
+                        <section>
+                            <h5>Drie compleet willekeurige feitjes over mij:</h5>
+                            <ul>
+                                <li> <span>Toen ik vier jaar oud was, had ik epilepsie.</span></li>
+                                <li><span>Ik heb twee keer mijn haar bruin geverfd.</span> </li>
+                                <li> <span>Net vóór corona ben ik naar Disneyland Parijs geweest… en werd ik direct
+                                        daarna
+                                        megaziek. </span></li>
+                            </ul>
+                        </section>
+                    </form>
+                </dialog>
+                <button class="button" onclick="document.getElementById('myDialog1').showModal()">
+                    <img src="img/feitjes.jpg" alt="ikzelf">
+                    <h2>Feitjes</h2>
+                </button>
+            </section>
+            <section>
+                <dialog id="myDialog2" aria-label="interesses die ik heb">
+                    <form id="dialog2" method="dialog">
+                        <div>
+                            <button class="closeDialog">Terug</button>
+                            <h3>mijn interesses</h3>
+                        </div>
+                        <div class="container">
+                            <div class="left-side">
+
+                                <section class="grid">
+                                    <h2>volleybal</h2>
+                                    <p>lorem ipsum</p>
+                                    <img src="img/Volleyball.png" alt="volleyball">
+                                </section>
+                                <section class="grid-reverse">
+                                    <h2>volleybal</h2>
+                                    <p>lorem ipsum</p>
+                                    <img src="img/feitjes.jpg" alt="ik">
+                                </section>
+                            </div>
+                            <section class="grid-verticaal">
+                                <h2>volleybal</h2>
+                                <p>lorem ipsum</p>
+                                <img src="img/background.jpg" alt="ik">
+                            </section>
+                        </div>
+
+                    </form>
+                </dialog>
+                <button class="button" onclick="document.getElementById('myDialog2').showModal()">
+                    <img src="img/Interesses.jpg" alt="favoriete koffie tentje">
+                    <h2>Interesses</h2>
+                </button>
+            </section>
+            <section>
+                <dialog id="myDialog3" aria-label="mijn tijd in rmit">
+                    <form class="dialog" id="dialog3" method="dialog">
+                        <div><button class="closeDialog">Terug</button>
+                            <h3>Royal Melbourne Institute of Technology</h3>
+                        </div>
+                        <h4>Hi, welkom op mijn pagina!</h4>
+                        <p>Mijn naam is Annika en ik ben 20 jaar oud. Ik ben een enorme reisliefhebber en heb bijna heel
+                            Zuidoost-Azië verkend. Mijn laatste avontuur bracht me naar Vietnam, waar ik een semester in
+                            Ho Chi Minh City heb gestudeerd. Het was echt de tijd van mijn leven! </p>
+                        <p>Naast reizen ben ik ook dol op volleybal. Sport houdt me in balans na al die geweldige
+                            reiservaringen en nieuwe culturen ontdekken.</p>
+                        <div>
+                            <img src="img/feitjes.jpgx" alt="ik">
+                            <img src="img/doelen.jpg" alt="hoi">
+                            <img src="img/Interesses.jpg" alt="hio">
+                            <img src="img/Fotos.jpg" alt="fotos">
+                        </div>
+                        <section>
+                            <h5>Drie compleet willekeurige feitjes over mij:</h5>
+                            <ul>
+                                <li>Toen ik vier jaar oud was, had ik epilepsie.</li>
+                                <li>Ik heb twee keer mijn haar bruin geverfd. </li>
+                                <li>Net vóór corona ben ik naar Disneyland Parijs geweest… en werd ik direct daarna
+                                    megaziek. </li>
+                            </ul>
+                        </section>
+                    </form>
+                </dialog>
+                <button class="button" onclick="document.getElementById('myDialog3').showModal()">
+                    <img src="img/RMIT.jpg" alt="university RMIT vietnam">
+                    <h2>RMIT</h2>
+                </button>
+            </section>
+            <section>
+                <dialog id="myDialog4" aria-label="mijn doelen die k heb">
+                    <form class="dialog" id="dialog4" method="dialog">
+                        <div><button class="closeDialog">Terug</button>
+                            <h3>Mijn leerdoelen dit semester</h3>
+                        </div>
+                        <h4>Hi, welkom op mijn pagina!</h4>
+                        <p>Mijn naam is Annika en ik ben 20 jaar oud. Ik ben een enorme reisliefhebber en heb bijna heel
+                            Zuidoost-Azië verkend. Mijn laatste avontuur bracht me naar Vietnam, waar ik een semester in
+                            Ho Chi Minh City heb gestudeerd. Het was echt de tijd van mijn leven! </p>
+                        <p>Naast reizen ben ik ook dol op volleybal. Sport houdt me in balans na al die geweldige
+                            reiservaringen en nieuwe culturen ontdekken.</p>
+                        <div>
+                            <img src="img/feitjes.jpg" alt="ik">
+                            <img src="img/doelen.jpg" alt="hoi">
+                            <img src="img/Interesses.JPG" alt="hio">
+                            <img src="img/Fotos.jpg" alt="fotos">
+                        </div>
+                        <section>
+                            <h5>Drie compleet willekeurige feitjes over mij:</h5>
+                            <ul>
+                                <li>Toen ik vier jaar oud was, had ik epilepsie.</li>
+                                <li>Ik heb twee keer mijn haar bruin geverfd. </li>
+                                <li>Net vóór corona ben ik naar Disneyland Parijs geweest… en werd ik direct daarna
+                                    megaziek. </li>
+                            </ul>
+                        </section>
+                    </form>
+                </dialog>
+                <button class="button" onclick="document.getElementById('myDialog4').showModal()">
+                    <img src="img/doelen.png" alt="7/11 sign">
+                    <h2>Doelen</h2>
+                </button>
+            </section>
+            </section>
+        </div>
+
+    </main>
+    <button id="myBtn" onclick="myFunction()">Pause video</button>
+    <script src="button.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
