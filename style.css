@@ -60,22 +60,12 @@ body::before {
     z-index: -1;
 }
 
-/* #myVideo {
-    z-index: 0;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    opacity: 0.8;
-    /* min-height: 100%; */
-
 #myVideo {
     z-index: -1;
     position: fixed;
     right: 0;
     bottom: 0;
     display: none;
-    /* Hidden by default */
 }
 
 /* -----------------header----------------------- */
@@ -357,7 +347,7 @@ main>div {
     /* position: fixed; */
 }
 
-.dialog>div:nth-of-type(1) {
+.dialog >div:nth-of-type(1) {
     display: flex;
     flex-direction: row;
     grid-row: 1;
@@ -802,45 +792,48 @@ main>div {
     align-self: start;
 }
 
+#dialog4 {
+    padding: 1.5em;
+}
+
+#dialog4> div {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+#dialog4 h3 {
+    align-self: center;
+    font-weight: 100;
+    font-style: italic;
+    color: var(--grey);
+    font-size: 1em;
+}
+
 #dialog4 section {
     width: 70%;
     padding: 2em;
 }
 
 #dialog4 section ul {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
     list-style-type: none;
     gap: 1em;
     margin: 0;
-    padding: 0;
-    flex-wrap: wrap;
-    align-items: center;
+    padding: 2em 0;
 }
 
-#dialog4  section ul li {
+#dialog4 section ul li {
     background-color: rgb(204 232 235);
     color: var(--black);
     padding: 2em;
-    flex: 1;
     border-radius: 1em;
-    cursor: pointer;
     text-align: center;
-    justify-self: center;
-    height: 6em;
-    /* overflow: hidden; */
 }
-
 
 #dialog4 section h2 {
    font-size: 4em;
 }
-
-
-
-
-
-
-
 
 /* ------------------responsive-------------------- */
 @media screen and (max-width: 775px) {
@@ -852,9 +845,6 @@ main>div {
     #myDialog2,
     #myDialog3,
     #myDialog4 {
-        /* border: none;
-        border-radius: 2em;
-        margin: auto; */
         width: 97%;
         max-width: 95vw;
         height: 98%;
@@ -955,11 +945,11 @@ main>div {
         max-width: 100%;
     }
 /* ---------rmit------------ */
+
     #dialog3 section> p {
         grid-column-start:1;
         grid-column-end:-1;
     }
-    
     
     #dialog3 section > img {
         grid-row: 4;
@@ -989,14 +979,10 @@ main>div {
         grid-column-start: 1;
         grid-column-end: -1;
         width: 100%;
-        
     }
-    
-    
+
     #dialog3 section > img {  
         grid-column-end: -1;
         width: 100%;
-
     }
-    
 }
