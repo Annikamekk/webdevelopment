@@ -150,6 +150,11 @@ function getMyImage() {
 }
 
 
+
+
+
+
+
 // function searchFunction(event) {
 //     event.preventDefault(); // Zorg ervoor dat het formulier niet opnieuw laadt.
 

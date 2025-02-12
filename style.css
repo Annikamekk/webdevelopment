@@ -1,26 +1,41 @@
-
-@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
-
 @font-face {
     font-family: 'Poppins';
-    src: url(Poppins/OFL.txt);
+    src: url('Poppins/Poppins-Black.ttf') format('truetype'),
+        url('Poppins/Poppins-BlackItalic.ttf') format('truetype'),
+        url('Poppins/Poppins-Bold.ttf') format('truetype'),
+        url('Poppins/Poppins-BoldItalic.ttf') format('truetype'),
+        url('Poppins/Poppins-ExtraBold.ttf') format('truetype'),
+        url('Poppins/Poppins-ExtraBoldItalic.ttf') format('truetype'),
+        url('Poppins/Poppins-ExtraLight.ttf') format('truetype'),
+        url('Poppins/Poppins-ExtraLightItalic.ttf') format('truetype'),
+        url('Poppins/Poppins-Italic.ttf') format('truetype'),
+        url('Poppins/Poppins-Light.ttf') format('truetype'),
+        url('Poppins/Poppins-LightItalic.ttf') format('truetype'),
+        url('Poppins/Poppins-Medium.ttf') format('truetype'),
+        url('Poppins/Poppins-MediumItalic.ttf') format('truetype'),
+        url('Poppins/Poppins-Regular.ttf') format('truetype'),
+        url('Poppins/Poppins-SemiBold.ttf') format('truetype'),
+        url('Poppins/Poppins-SemiBoldItalic.ttf') format('truetype'),
+        url('Poppins/fonts/Poppins-Thin.ttf') format('truetype'),
+        url('Poppins/Poppins-ThinItalic.ttf') format('truetype'),
 }
 
-:root{
+:root {
     --grey: rgb(167 167 167);
     --light-grey: rgb(222, 222, 222);
-    --white:white;
+    --white: white;
     --black: rgb(34 33 36);
-    --funky:rgb(77 129 188);
+    --funky: rgb(77 129 188);
 
 }
-  *{
+
+* {
     box-sizing: border-box;
     margin: 0;
     font-family: Poppins-Light, Arial, Helvetica, sans-serif;
-  }
+}
 
-  body {
+body {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -53,75 +68,81 @@ body::before {
     min-width: 100%; 
     opacity: 0.8;
     /* min-height: 100%; */
-    
-    #myVideo{
+
+#myVideo {
     z-index: -1;
     position: fixed;
     right: 0;
     bottom: 0;
-    display: none; /* Hidden by default */
-    }
- 
- /* -----------------header----------------------- */
+    display: none;
+    /* Hidden by default */
+}
 
-  header {
+/* -----------------header----------------------- */
+
+header {
     display: flex;
     position: absolute;
     top: 1em;
     right: 1em;
 }
 
- header ul{
+header ul {
     display: flex;
     gap: 1em;
     width: 100%;
     padding: 0;
- }
+}
 
- header li {
+header li {
     list-style-type: none;
     display: flex;
     align-items: center;
- }
- header li a{
+}
+
+header li a {
     font-size: 1em;
     text-decoration: none;
     color: var(--black);
- }
-header ul li:nth-of-type(1) a:visited {
-   color:var(--black);
- }
+}
 
- header li button{
+header ul li:nth-of-type(1) a:visited {
+    color: var(--black);
+}
+
+header li button {
     font-size: 1em;
     border: none;
     background-color: transparent;
     cursor: pointer;
- }
-
- header li img{
-    object-fit: contain;
-    width: 1em;
-    height:1em;
- }
-
- header li:not(:has(img)) {
-    align-items: center; /* Ensure the text is vertically centered */
-    justify-content: flex-start; /* Align text to the left (or whatever you prefer) */
 }
 
-header li:nth-of-type(4) img{
+header li img {
+    object-fit: contain;
+    width: 1em;
+    height: 1em;
+}
+
+header li:not(:has(img)) {
+    align-items: center;
+    /* Ensure the text is vertically centered */
+    justify-content: flex-start;
+    /* Align text to the left (or whatever you prefer) */
+}
+
+header li:nth-of-type(4) img {
     width: 2em;
-    height:2em;
+    height: 2em;
     border-radius: 50%;
     border: .1em solid var(--white);
- }
+}
+
 /* -------------foto dialog------------------- */
 #Fotos {
-    border: none ;
+    border: none;
     border-radius: 2em;
     margin: auto;
-    width:98%;
+    width: 98%;
     max-width: 100vw;
     height: 98%;
     max-height: 100vh;
@@ -129,7 +150,7 @@ header li:nth-of-type(4) img{
     padding: 2em;
 }
 
-.dialog1 div:nth-of-type(1){
+.dialog1 div:nth-of-type(1) {
     display: flex;
     flex-direction: row;
     grid-row: 1;
@@ -137,48 +158,61 @@ header li:nth-of-type(4) img{
     column-gap: 1em;
     align-self: center;
 }
-.dialog1 div:nth-of-type(1) h3{
+
+.dialog1 div:nth-of-type(1) h3 {
     height: fit-content;
     align-self: center;
     font-weight: 300;
     font-style: italic;
     font-size: 1.4em;
     color: var(--grey);
+    font-size: 1em;
 }
 
 #photoContainer {
-    display: grid; /* Gebruik grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(17em, 1fr)); /* Dynamisch aantal kolommen */
-    grid-auto-rows: minmax(max-content, auto); /* Zorg ervoor dat de rijen automatisch de juiste hoogte krijgen */
-    gap: 1em; /* Ruimte tussen de afbeeldingen */
-    padding: 1em; /* Ruimte rondom de container */
-    justify-items: center; /* Zorgt ervoor dat afbeeldingen gecentreerd zijn */
-    align-items: start; /* Begin met de afbeeldingen bovenaan */
+    display: grid;
+    /* Gebruik grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(17em, 1fr));
+    /* Dynamisch aantal kolommen */
+    grid-auto-rows: minmax(max-content, auto);
+    /* Zorg ervoor dat de rijen automatisch de juiste hoogte krijgen */
+    gap: 1em;
+    /* Ruimte tussen de afbeeldingen */
+    padding: 1em;
+    /* Ruimte rondom de container */
+    justify-items: center;
+    /* Zorgt ervoor dat afbeeldingen gecentreerd zijn */
+    align-items: start;
+    /* Begin met de afbeeldingen bovenaan */
 }
 
 .dialog-content img {
-    width: 100%; /* Zorg ervoor dat de afbeelding de volledige breedte van de gridcel gebruikt */
-    height: auto; /* Laat de hoogte automatisch aanpassen aan de breedte */
-    border-radius: .5em; /* Zachte hoeken voor de afbeeldingen */
-    object-fit: cover; /* Zorgt ervoor dat de afbeelding netjes in de gridcel past */
-    transition: transform 0.2s ease-in-out; /* Voeg een animatie toe voor een vloeiendere overgang */
+    width: 100%;
+    /* Zorg ervoor dat de afbeelding de volledige breedte van de gridcel gebruikt */
+    height: auto;
+    /* Laat de hoogte automatisch aanpassen aan de breedte */
+    border-radius: .5em;
+    /* Zachte hoeken voor de afbeeldingen */
+    object-fit: cover;
+    /* Zorgt ervoor dat de afbeelding netjes in de gridcel past */
+
 }
 
 
 
- /* ------------------main----------------- */
+/* ------------------main----------------- */
 h1 {
     font-family: Poppins;
     z-index: 1;
     position: absolute;
-    
+
     top: 2em;
-    
-    
+
+
     font-size: 5em;
 }
 
-#myBtn{
+#myBtn {
     z-index: 1;
     position: absolute;
     bottom: 2em;
@@ -192,14 +226,15 @@ h1 {
     display: none;
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
 }
-main > form{
+
+main>form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,20 +244,20 @@ main > form{
     width: 40%;
 }
 
-main > form input{
+main>form input {
     order: 2;
     width: 100%;
     padding: 1em;
-    border:none;
-    border-radius:  0 2em 2em 0;
+    border: none;
+    border-radius: 0 2em 2em 0;
 }
 
-main > form input::placeholder {
+main>form input::placeholder {
     font-size: 1.1em;
 }
 
 #searchButton {
-    order:1;
+    order: 1;
     background-image: url('img/search.png');
     background-repeat: no-repeat;
     background-size: 1.5em;
@@ -231,14 +266,14 @@ main > form input::placeholder {
     border-radius: 2em 0 0 2em;
     padding: 1.75em;
     cursor: pointer;
-    background-color:var(--white);
+    background-color: var(--white);
     /* transform: rotate(-4deg); */
     width: 2em;
     height: 2em;
 
-  }
+}
 
-main > div{
+main>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,38 +282,40 @@ main > div{
 }
 
 /* -------------------buttons onder zoekbalk----------------------- */
-.button{
+.button {
     display: flex;
-    flex-direction: column;  /* Aligns child elements (image and h2) in a column */
-    justify-content: center; /* Vertically center the content inside the section */
-    align-items: center; 
+    flex-direction: column;
+    /* Aligns child elements (image and h2) in a column */
+    justify-content: center;
+    /* Vertically center the content inside the section */
+    align-items: center;
     width: 6em;
     height: 6em;
-    text-align: center; 
+    text-align: center;
     gap: 1em;
-    border:none ;
+    border: none;
     background-color: transparent;
     cursor: pointer;
 }
 
- .button img{
-    display: flex;           
-    justify-content: center; 
-    align-items: center;     
+.button img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--grey);
     width: 4em;
     height: 6em;
     border-radius: 50%;
-    width:4em;
-    height:4em;
+    width: 4em;
+    height: 4em;
     border-radius: 50%;
-    padding:.3em;
+    padding: .3em;
     background-color: var(--grey);
-   
+
 }
 
-.button h2{
-    font-size: 1em;      
+.button h2 {
+    font-size: 1em;
     text-align: center;
     margin-top: -0.5em;
     color: var(--black);
@@ -291,16 +328,16 @@ main > div{
 #open_dialog3,
 #open_dialog4 {
     margin: 0 auto;
-  }
+}
 
 #myDialog1,
-#myDialog2, 
+#myDialog2,
 #myDialog3,
 #myDialog4 {
-    border: none ;
+    border: none;
     border-radius: 2em;
     margin: auto;
-    width:98%;
+    width: 98%;
     max-width: 100vw;
     height: 98%;
     max-height: 100vh;
@@ -308,18 +345,19 @@ main > div{
 }
 
 #myDialog1 form
- /* #myDialog3 form,
+
+/* #myDialog3 form,
 #myDialog4 form */
     {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: max-content 5em 6em 5em 10em ;
+    grid-template-rows: max-content fit-content 4em 2em 5em;
     padding: 2em;
     column-gap: 1em;
-    position: fixed;
+    /* position: fixed; */
 }
 
-.dialog div:nth-of-type(1){
+.dialog>div:nth-of-type(1) {
     display: flex;
     flex-direction: row;
     grid-row: 1;
@@ -327,38 +365,46 @@ main > div{
     column-gap: 1em;
 }
 
-.closeDialog{
-    border:none;
-    padding:0.7em 1em;
-    border-radius: 1em; 
+.closeDialog {
+    border: none;
+    padding: 0.7em 1em;
+    border-radius: 1em;
     background-color: var(--light-grey);
 
 }
 
-.dialog h3{
+.dialog h3 {
     grid-row: 1;
-    grid-column: 2; 
+    grid-column: 2;
     align-self: center;
     font-weight: 100;
     font-style: italic;
     color: var(--grey);
+    font-size: 1em;
 }
 
-  
-.dialog h4{
+
+.dialog h4 {
     grid-row: 2;
-    grid-column-start: 1;
-    grid-column-end: -1; 
-    font-size: 2em;
+    grid-column: 1;
+    font-size: 4.5em;
     align-self: center;
+    line-height: 1.1em;
+    padding: .5em 0;
+
 }
-  
-.dialog p:nth-of-type(1){
+
+.dialog p {
+    font-size: .9em;
+}
+
+.dialog p:nth-of-type(1) {
     grid-row: 3;
     grid-column-start: 1;
     width: 95%;
 }
-.dialog p:nth-of-type(2){
+
+.dialog p:nth-of-type(2) {
     grid-row: 4;
     grid-column-start: 1;
     padding-top: 0.5em;
@@ -367,47 +413,92 @@ main > div{
 }
 
 .dialog div:nth-of-type(2),
-.dialog div:nth-of-type(3)
-{
+.dialog div:nth-of-type(3) {
     display: flex;
     flex-direction: column;
     grid-row-start: 2;
     grid-row-end: 6;
-    overflow: scroll;
+    overflow: hidden;
     row-gap: 1em;
     height: 80vh;
 }
-.dialog div:nth-of-type(2){
+
+.dialog div:nth-of-type(2) {
     grid-column: 2;
 }
 
-.dialog div:nth-of-type(3){
+.dialog div:nth-of-type(3) {
     grid-column: 3;
 }
 
-.dialog div img{
-    width: 20em;
-    height: auto;
+.dialog div:nth-of-type(2)>div {
+    animation-name: imgAnimatie;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
 }
 
-.dialog section{
+.dialog div:nth-of-type(3)>div {
+    animation-name: imgAnimatieReverse;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes imgAnimatie {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-75%);
+    }
+
+}
+
+@keyframes imgAnimatieReverse {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.dialog div img {
+    width: 100%;
+    height: max-content;
+    contain: paint;
+}
+
+.dialog section {
     grid-row: 5;
     grid-column: 1;
     padding: 1em 0;
 }
 
-.dialog section ul{
+.dialog section h5 {
+    font-size: 1em;
+    margin: 1.5em 0;
+}
+
+.dialog section ul {
     display: flex;
-    list-style: none;
+    list-style-type: none;
     gap: 1em;
-    margin-top: 2em;
-    margin-left: -3em;
+    /* margin-top: 2em; */
+    margin: 0;
+    padding: 0;
     max-width: 95%;
     flex-wrap: wrap;
 }
 
-.dialog section ul li{
-    background-color: rgb(204 232 235) ;
+.dialog section ul li {
+    background-color: rgb(204 232 235);
     color: var(--black);
     padding: 1.2em;
     flex: 1;
@@ -421,21 +512,21 @@ main > div{
 .dialog section ul li::before {
     content: "click me";
     position: absolute;
-    inset:0;    
+    inset: 0;
     font-size: 1em;
     font-weight: 600;
     text-transform: uppercase;
-    background-color:rgb(143 204 224);
-    display:grid;
+    background-color: rgb(143 204 224);
+    display: grid;
     place-items: center;
-    border:.2em solid var(--black);
+    border: .2em solid var(--black);
     border-radius: inherit;
 }
 
 .dialog section ul li.is-revealed::before {
     animation: fly-away .5s forwards;
     z-index: 1;
-    pointer-events:none;
+    pointer-events: none;
 }
 
 @keyframes fly-away {
@@ -453,149 +544,143 @@ main > div{
         translate: 4em 6em;
         opacity: 1;
     }
+
     100% {
         opacity: 0;
-        
+
     }
 
 }
 
-.dialog section ul li span {
-    transition: opacity 0.5s ease-in-out;
-    display: block;
-}
-
-.dialog section ul li.revealed::before{
-    opacity: 0;
-}
-
-.dialog section ul li.fly-away::before {
-    transform: translate(100px, -100px) rotate(30deg); /* Deksel vliegt weg! */
-    opacity: 0;
-}
-.dialog section ul li:nth-of-type(3){
+.dialog section ul li:nth-of-type(3) {
     flex-basis: 100%;
 }
 
 /* ---------title en button dialog2---------------- */
-#dialog2{
+
+#dialog2 {
     display: flex;
     flex-direction: column;
     padding: 2em;
 }
 
-#dialog2 > div:nth-of-type(1){
+#dialog2>div:nth-of-type(1) {
     display: flex;
     flex-basis: 100%;
     column-gap: 1em;
 }
 
-#dialog2 div:nth-of-type(1) button{
-   height: fit-content;
+#dialog2 div:nth-of-type(1) button {
+    height: fit-content;
 }
-#dialog2 div:nth-of-type(1) h3{
+
+#dialog2 div:nth-of-type(1) h3 {
     height: fit-content;
     align-self: center;
     font-weight: 100;
     font-style: italic;
     color: var(--grey);
- }
+    font-size: 1em;
+}
 
- /* -----------------info dialog2---------------------- */
- .container {
+/* -----------------info dialog2---------------------- */
+
+.container {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Twee kolommen: 1 voor links en 1 voor rechts */
+    grid-template-columns: 2fr 1fr;
+    /* Twee kolommen: 1 voor links en 1 voor rechts */
     gap: 2em;
     align-items: start;
     padding: 1em;
 }
 
-.grid, .grid-reverse, .grid-verticaal {
-    background: linear-gradient(90deg, #3998cb, #f1ffff); /* De gradient die door de secties stroomt */
+.grid,
+.grid-reverse,
+.grid-verticaal {
+    background: linear-gradient(90deg, #3998cb, #f1ffff);
+    /* De gradient die door de secties stroomt */
     padding: 20px;
     color: white;
     position: relative;
 }
 
 .grid-verticaal {
-    background: linear-gradient(-90deg,#3998cb, #f1ffff); /* Oud wit naar roze in de hoeken */
+    background: linear-gradient(-90deg, #3998cb, #f1ffff);
+    /* Oud wit naar roze in de hoeken */
 }
 
- #dialog2 section{
+#dialog2 section {
     background-color: var(--light-grey);
     padding: 2em;
 }
+
 .left-side {
     display: flex;
     flex-direction: column;
-    gap: 2em; /* Ruimte tussen section 1 en 2 */
+    gap: 2em;
+    /* Ruimte tussen section 1 en 2 */
 }
 
 /* ---------------------eerste section---------- */
-.grid{
+
+.grid {
     display: grid;
     grid-template-columns: max-content 2fr;
     grid-template-rows: 3em max-content;
     column-gap: 2em;
     margin-top: 1em;
     border-radius: 1.5em 1.5em 10em 1.5em;
-    /* background-image: linear-gradient( -150deg,
-    hsl(200 60 45),
-    hsl(180 100 100)
-   ); */
- }
+}
 
 
-.grid h2{
+.grid h2 {
     grid-column: 2;
     grid-row: 1;
- }
+}
 
- .grid p,
- .grid-verticaal p{
+.grid p,
+.grid-verticaal p {
     grid-column: 2;
     grid-row: 2;
- }
+}
 
 .grid img,
-.grid-verticaal img{
-   height: 20em;
-   grid-column: 1;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   
+.grid-verticaal img {
+    height: 20em;
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 /* -------------grid verticaal (tweede section)-------------- */
+
 .grid-verticaal {
     display: flex;
-    align-self: stretch; 
+    align-self: stretch;
     margin-top: 1em;
     flex-direction: column-reverse;
     justify-content: start;
-    border-radius:10em 1.5em 10em 1.5em;
-    /* background-image: linear-gradient( 150deg,
-     hsl(200 60 45),
-     hsl(180 100 100)
-    ); */
+    border-radius: 10em 1.5em 10em 1.5em;
 }
 
-
-.grid-verticaal h2{
+.grid-verticaal h2 {
     order: 1;
     align-self: end;
 }
-.grid-verticaal p{
+
+.grid-verticaal p {
     align-self: end;
 }
 
-.grid-verticaal img{
+.grid-verticaal img {
     order: -1;
     width: 100%;
     height: auto;
 }
+
 /* -------------grid-reverse(derde section)------------- */
-.grid-reverse{
+
+.grid-reverse {
     display: grid;
     grid-template-columns: 2fr max-content;
     grid-template-rows: 3em max-content;
@@ -603,22 +688,315 @@ main > div{
     width: 60vw;
     border-radius: 10em 1.5em 1.5em 1.5em;
 }
+
 .grid-reverse h2 {
     grid-column: 1;
     grid-row: 1;
     justify-self: end;
 
- }
-.grid-reverse p{
+}
+
+.grid-reverse p {
     grid-column: 1;
     grid-row: 2;
     justify-self: end;
- }
+}
 
-.grid-reverse img{
-   height: 20em;
-   grid-column: 2;
-   grid-row-start: 1;
-   grid-row-end: 3;
+.grid-reverse img {
+    height: 20em;
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+
+/* ------------RMIT DIALOG--------------------- */
+
+#dialog3 {
+    padding: 1.5em;
+}
+
+#dialog3> div {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+#dialog3 h3 {
+    align-self: center;
+    font-weight: 100;
+    font-style: italic;
+    color: var(--grey);
+    font-size: 1em;
    
+}
+
+#dialog3 section {
+    /* display: flex;
+    flex-direction: column; */
+    height: 100%;
+
+}
+
+#dialog3 section >div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3em;
+    overflow: scroll;
+    gap: 1em;
+    width: 100%;
+    order:1;
+    height: 100%;
+    border-radius: .5em;
+}
+#dialog3 section >div img{
+   height: 23em;
+   border-radius: .5em;
+}
+
+#dialog3 section > section{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-auto-rows: max-content;
+    column-gap: 2em;
+}
+
+#dialog3 section> h2 {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    font-size: clamp(22px, 4.6vw, 35px);
+    font-weight: 1000;
+    padding-top:1em;
+}
+#dialog3 section> h2 span{
+    color: oklch(61.4% 0.2 25.52);
+}
+
+#dialog3 section> article {
+    grid-row: 2;
+    grid-column:2;
+    font-size: clamp(14px, 1.2vw, 30px);
+    width: 85%;
+    
+}
+
+#dialog3 section> article p {
+    font-size: clamp(10px, 1vw, 30px);
+    padding-top: 1em;
+
+}
+#dialog3 section> article h3{
+    font-size: 1.5em;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--black);
+    padding-top: 1em;
+}
+
+
+
+#dialog3 section > img {
+    grid-row: 2;
+    grid-column:1;
+    width: 100%;
+    align-self: start;
+}
+
+#dialog4 section {
+    width: 70%;
+    padding: 2em;
+}
+
+#dialog4 section ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#dialog4  section ul li {
+    background-color: rgb(204 232 235);
+    color: var(--black);
+    padding: 2em;
+    flex: 1;
+    border-radius: 1em;
+    cursor: pointer;
+    text-align: center;
+    justify-self: center;
+    height: 6em;
+    /* overflow: hidden; */
+}
+
+
+#dialog4 section h2 {
+   font-size: 4em;
+}
+
+
+
+
+
+
+
+
+/* ------------------responsive-------------------- */
+@media screen and (max-width: 775px) {
+    main>form {
+        width: 90%;
+    }
+
+    #myDialog1,
+    #myDialog2,
+    #myDialog3,
+    #myDialog4 {
+        /* border: none;
+        border-radius: 2em;
+        margin: auto; */
+        width: 97%;
+        max-width: 95vw;
+        height: 98%;
+        max-height: 95vh;
+        overflow: auto;
+    }
+
+    #myDialog1 form {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto 25em 25em auto;
+        column-gap: 0;
+    }
+
+    .dialog div:nth-of-type(1) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+
+    .dialog h4 {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        font-size: 3em;
+    }
+
+    .dialog p:nth-of-type(1) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        width: 100%;
+    }
+
+    .dialog p:nth-of-type(2) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        width: 100%;
+    }
+
+    .dialog div:nth-of-type(2),
+    .dialog div:nth-of-type(3) {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .dialog div:nth-of-type(2) {
+        grid-column: 1;
+        grid-column-end: -1;
+        grid-row: 5;
+    }
+
+    .dialog div:nth-of-type(3) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        grid-row: 6;
+        max-height: 100%;
+    }
+
+    .dialog div:nth-of-type(2)>div {
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        animation: none;
+        gap: 1em;
+    }
+
+    .dialog div:nth-of-type(3)>div {
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        animation: none;
+        gap: 1em;
+    }
+
+    .dialog div:nth-of-type(3)>div img:nth-of-type(1) {
+        height: 25em;
+        contain: style;
+        width: auto;
+    }
+
+    .dialog div img {
+        width: 100%;
+        height: 25em;
+    }
+
+    .dialog section {
+        grid-row: 7;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        max-width: 100%;
+    }
+
+    .dialog section ul {
+        justify-self: center;
+
+    }
+
+    .dialog section ul li {
+        flex: none;
+        max-width: 100%;
+    }
+/* ---------rmit------------ */
+    #dialog3 section> p {
+        grid-column-start:1;
+        grid-column-end:-1;
+    }
+    
+    
+    #dialog3 section > img {
+        grid-row: 4;
+        grid-column-start:1;
+        grid-column-end:-1;
+        align-self: center;
+        justify-self: center;
+        
+    }
+    #dialog3 section > section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: max-content;
+        column-gap: 2em;
+    }
+    
+    #dialog3 section> h2 {
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        font-size: clamp(22px, 4.6vw, 35px);
+        font-weight: 1000;
+        padding-top:1em;
+    }
+    
+    #dialog3 section> article {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        width: 100%;
+        
+    }
+    
+    
+    #dialog3 section > img {  
+        grid-column-end: -1;
+        width: 100%;
+
+    }
+    
 }
