@@ -740,6 +740,7 @@ main>div {
 }
 #dialog3 section >div img{
    height: 23em;
+   width: 100%;
    border-radius: .5em;
 }
 
