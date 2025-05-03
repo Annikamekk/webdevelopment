@@ -11,11 +11,6 @@
 </head>
 
 <body>
-    <video autoplay muted loop id="myVideo">
-        <source src="background.MOV" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-
     <header>
         <ul>
             <li><a href="mailto:annika.mekkelholt@gmail.com">Gmail</a></li>
@@ -32,7 +27,7 @@
                     </form>
                 </dialog>
                 <button onclick="document.getElementById('Fotos').showModal()">
-                    <p>Images</p>
+                    Images
                 </button>
             </li>
             <li><a href="https://youtu.be/8flUUftIV04" target="_blank"><img src="img/More.svg" alt="9 dots"></a></li>
@@ -49,181 +44,334 @@
         </form>
         <div>
             <section>
-                <dialog id="myDialog1" aria-label="meer informatie over mij">
+                <dialog id="myDialog1" aria-label="weekly nerd1">
                     <form class="dialog" id="dialog1" method="dialog">
                         <div><button class="closeDialog">Terug</button>
-                            <h3>feitjes over mij</h3>
+                            <h3>WEEKLY NERD 1</h3>
                         </div>
-                        <h4>Hi, welkom op mijn pagina!</h4>
-                        <p>Mijn naam is Annika en ik ben 20 jaar oud. Ik ben een enorme reisliefhebber en heb bijna heel
-                            Zuidoost-Azië verkend. Mijn laatste avontuur bracht me naar Vietnam, waar ik een semester in
-                            Ho Chi Minh City heb gestudeerd. Het was echt de tijd van mijn leven! </p>
-                        <p>Naast reizen ben ik ook dol op volleybal. Sport houdt me in balans na al die geweldige
-                            reiservaringen en nieuwe culturen ontdekken.</p>
-                        <div>
-                            <div class="AnimationContainer">
-                                <img src="img/activiteit.jpg" alt="mario kart">
-                                <img src="img/OvermijJava.jpeg" alt="hoi">
-                                <img src="img/volleybalmensen.jpg" alt="hio">
-                                <img src="img/overmijVivanne.jpg" alt="fotos">
-                                <img src="img/overmijBooth.JPG" alt="">
-                                <img src="img/overmijReizen.JPG" alt="">
-                            </div>
-                        </div>
+                        <h1>Kilian Valkhof</h1>
                         <div>
                             <div>
-                                <img src="img/overmijMe.PNG" alt="ik">
-                                <img src="img/overmijziggo.jpeg" alt="hoi">
-                                <img src="img/vietnam.jpg" alt="hio">
-                                <img src="img/overmijmolly.jpg" alt="fotos">
-                                <img src="img/OvermijBali.JPG" alt="">
-                                <img src="img/overmijBooth.JPG" alt="">
+                                <h2>Rule of least power</h2>
+                            </div>
+                            <div>
+                                <img src="img/WN1Scrollanimation.jpeg" alt="scrollanimation">
                             </div>
                         </div>
-                        <section>
-                            <h5>Drie compleet willekeurige feitjes over mij:</h5>
-                            <ul>
-                                <li> <span>Toen ik vier jaar oud was, had ik epilepsie.</span></li>
-                                <li><span>Ik heb twee keer mijn haar bruin geverfd.</span> </li>
-                                <li> <span>Net vóór corona ben ik naar Disneyland Parijs geweest… en werd ik direct
-                                        daarna
-                                        megaziek. </span></li>
-                            </ul>
-                        </section>
+                        <div>
+                            <img src="img/easeCodeWN1.jpeg" alt="code voor kassa bon">
+                            <section>
+                                <h4>basic informatie over de weekly nerd presentatie:</h4>
+                                <p>kies de minst krachtige taal, dus begin met html! </p>
+                                <p>hierin vertelde hij allemaal handige tips om te gebruiken, zoals:
+                                <ul>
+                                    <li>custom switches</li>
+                                    <li>inputs - met styling de appearance none</li>
+                                    <li>:checked gebruiken</li>
+                                    <li>input{ accent-color:;}</li>
+                                    <li>scroll-margin-top met bijvoorbeeld 100px. -werkt als je scrollt en blijft het
+                                        een margin aanhouden bij het volgnde gedeelte.</li>
+                                    <li>#my-target:target{outline:.1em solid #;, transition;} om border aan te geven van
+                                        het volgende kopje 'highlight waar je naar toe scrollt/klikt. </li>
+                                    <li>@starting-style{ opacity:0; transform:scale(.8)} het start punt van de dialog
+                                    </li>
+                                    <li>:has het is een if statement eigenlijk 'als de section een h2 heeft dan doe dit'
+                                        bijv form:has(input:checked) input{color:red;}</li>
+                                    <li>select voor dropdown. ::picker(select){ appearance:base-select; - dit wekt
+                                        alleen in chrome, maar je zegt hiermee ik stijl het zelf, zoasl niet onder
+                                        elkaar dropdown maar naast elkaar.}</li>
+                                </ul>
+                                </p>
+                                <h4>Mening:</h4>
+                                <p> Dit was de eerste weekly nerd die we hadden, en ik vond het in het begin saai omdat
+                                    we de code die we kregen allemaal al wisten eigenlijk. maar ook fijn dat we het weer
+                                    ff te horen krijgen, want ik heb een half jaar niet gecodeerd dus was een goede
+                                    opfrisser.</p>
+                                <p>Uiteindelijk vond ik het ook echt handig, omdat er ook nieuwe dingen tussen zaten,
+                                    oals de scroll-margin-top en :has en eigenlijk bijna alles wat hier boven in de list
+                                    staat!. dit is super handig voor mijn vakken die ik deze mijn heb.
+                                </p>
+                            </section>
+
+                        </div>
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog1').showModal()">
                     <img src="img/feitjes.jpg" alt="ikzelf">
-                    <h2>Feitjes</h2>
+                    <h2>Kilian Valkhof</h2>
+
                 </button>
             </section>
-            <!-- <section>
+            <section>
                 <dialog id="myDialog2" aria-label="interesses die ik heb">
-                    <form id="dialog2" method="dialog">
-                        <div>
-                            <button class="closeDialog">Terug</button>
-                            <h3>mijn interesses</h3>
+                    <form class="dialog" id="dialog2" method="dialog">
+                        <div><button class="closeDialog">Terug</button>
+                            <h3>WEEKLY NERD 2</h3>
                         </div>
-                        <div class="container">
-                            <div class="left-side">
-
-                                <section class="grid">
-                                    <h2>volleybal</h2>
-                                    <p>lorem ipsum</p>
-                                    <img src="img/Volleyball.png" alt="volleyball">
-                                </section>
-                                <section class="grid-reverse">
-                                    <h2>volleybal</h2>
-                                    <p>lorem ipsum</p>
-                                    <img src="img/feitjes.jpg" alt="ik">
-                                </section>
+                        <h1>Kars Alfrink</h1>
+                        <div>
+                            <div>
+                                <h2>Contestable AI, Building Democratic Control over Public AI</h2>
                             </div>
-                            <section class="grid-verticaal">
-                                <h2>volleybal</h2>
-                                <p>lorem ipsum</p>
-                                <img src="img/background.jpg" alt="ik">
+                            <div>
+                                <img src="img/ContestableAI.jpeg" alt="scrollanimation">
+                            </div>
+                        </div>
+                        <div>
+                            <section>
+                                <h4>basic informatie over de weekly nerd presentatie:</h4>
+                                <p>1. Defining Contestable AI </p>
+                                <p>"the use of feedback-adjusted data analysis and processing to argument, support or
+                                    automate policy execution in the public sector." <br> "public AI systems impact
+                                    peoples autonomy" - benodigde conditions:
+                                <ol>
+                                    <li>accurated beliefs</li>
+                                    <li>act on your plans</li>
+                                </ol>
+                                aka veel onderzoek doen en veel testen!
+                                </p>
+                                <p>Op dit moment is contested AI een groot ding en cat contested AI inhoudt is:</p>
+                                <p>verwijst naar systemen of toepassingen van AI die onderwerp zijn van
+                                    maatschappelijke, ethische of juridische discussies. maar dit word negatief
+                                    bekritiseerd, omdat er gevolgen zijn zoals bias, gebrek aan transparantie of inbreuk
+                                    op privacy. Er worden beslissingen genoemen zonder duidelijke uitleg.</p>
                             </section>
                         </div>
+                        <div class="meerInfo">
+                            <img src="img/contestabilityLoopsAI.jpeg" alt="hele loop van AI onderzoek etc">
+                            <div>
+                                <p>
+                                    We moeten naar Contestable AI gaan, want die kan betwist worden. Met betwist word er
+                                    bedoeld dat het ontwerp is ingericht om menselijke tussenkomst en betwisting
+                                    mogelijk te maken. Dus gebruikers kunnen de beslissingen van het systeem makkelijker
+                                    begrijpen
+                                    of zelfs corrigeren. Dit biedt veel meer transparantie en herziening aan. Als
+                                    voorbeeld wil
+                                    ik geven, met de telefoon in de auto, je krijgt een boete omdat op de foto van een
+                                    flitser staat
+                                    dat je een telefoon bij het stuur is, maar die telefoon is opgeplakt op je raam om
+                                    te kunnen navigeren. Hierrmee
+                                    kun je in twijfel gaan en dus de fout van de AI corrigeren.
+                                </p>
+                                <h4>Part 2: Designing Contestable AI</h4>
+                                <ul>
+                                    <li>Interactive controles, voor meer controle voor de gebruiker (AI weet misschien
+                                        de het hele verhaal)</li>
+                                    <li>Intervention request
+                                        <ol>
+                                            <li>Human disagrees</li>
+                                            <li>channels for reconsideration</li>
+                                            <li>Human controller reconsiders - obligation 2 respond</li>
+                                            <li>dialectical exchange between controller & victim - arena for debate</li>
+                                        </ol>
+                                    </li>
+                                    <li>Monitor & pick-up patterns - alert humans for considerations</li>
+                                </ul>
+                                <p>Tools for scrutiny (streng toezicht):</p>
+                                <ul>
+                                    <li>algoritm register</li>
+                                    <li>Third party becomes aware of the AI system</li>
+                                </ul>
+                            </div>
+                        </div>
 
+                        <h4>Mening:</h4>
+                        <p> Ik heb persoonlijk helemaal geen interesse in AI, wat ik eigenlijk moet ik die wel hebben
+                            omdat het wel onze toekomst is. Maar ik vond dit eigenlijk best wel interessant om te horen!
+                            Ik vind het ook echt belangrijk dat het contestable AI door moet worden gevoerd, omdat je
+                            ten eerste ook echt mensen nodig hebt als 'third party' en er zit altijd veel fouten in de
+                            contested AI, want er wordt nooit uitgelegd in hun conclusies. Dit kan nare/negatieve
+                            gevolgen hebben. </p>
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog2').showModal()">
                     <img src="img/Interesses.jpg" alt="favoriete koffie tentje">
-                    <h2>Interesses</h2>
+                    <h2>Kars Alfrink</h2>
                 </button>
-            </section> -->
+            </section>
             <section>
-                <dialog id="myDialog3" aria-label="mijn tijd in rmit">
-                    <form id="dialog3" method="dialog">
-                        <div>
-                            <button class="closeDialog">Terug</button>
-                            <h3>Royal Melbourne Institute of Technology</h3>
+                <dialog id="myDialog3" aria-label="weeklynerd3">
+                    <form class="dialog" id="dialog3" method="dialog">
+                        <div><button class="closeDialog">Terug</button>
+                            <h3>WEEKLY NERD 3</h3>
                         </div>
-                        <section>
+                        <h1>Cassie Evans</h1>
+                        <div>
                             <div>
-                                <img src="img/RMIT.jpg" alt="rmit">
-                                <img src="img/SportVeldRMIT.JPG" alt="rmit">
-                                <img src="img/koffieRMIT.JPG" alt="rmit">
-                                <img src="img/Camera2RMIT.JPG" alt="rmit">
-                                <img src="img/VergaderingRMIT.JPG" alt="rmit">
-                                <img src="img/FotografieRMIT.JPG" alt="rmit"> 
-                                <img src="img/LEs.JPG" alt="rmit">
-                                <img src="img/TetRMIT.JPG" alt="rmit">
-                                <img src="img/ChristmasRMIT.PNG" alt="rmit">
-                                <img src="img/CultureTourRMIT.JPG" alt="rmit">
-                                <img src="img/WeeshuisRMIT.JPG" alt="rmit">
-                                <img src="img/VriendenRMIT.JPG" alt="rmit">
-                                <img src="img/FotoboothMnC.JPG" alt="rmit">
-                                <img src="img/VodkaSlushiesRMIT.jpeg" alt="rmit">
-                                <img src="img/FilmenRMIT.JPG" alt="rmit">
-                                <img src="img/PotteryRMIT.JPG" alt="rmit">  
-                                <img src="img/GingershotRMIT.JPG" alt="rmit">
-                                <img src="img/IMG_4772.JPG" alt="rmit">
-                                <img src="img/IMG_0247.jpeg" alt="rmit">
+                                <h2>GSAP - allows you to animate anything</h2>
                             </div>
+                            <div>
+                                <img src="img/BeyondTweening.jpeg" alt="gsap presentatie">
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/BeyondTweeningCOde.jpeg" alt="gsap code">
                             <section>
-                                <h2>Mijn semester aan het <span>RMIT vietnam</span></h2>
-                                <article>
-                                    <p>Ik heb door heel wat Aziatische landen gereisd, maar Vietnam blijft mijn nummer één. Elke keer dat ik er ben, 
-                                        word ik opnieuw verliefd op het land, de mensen en het eten. Je kunt me altijd wakker maken voor een lekkere kom pho.</p>
-                                    
-                                        <h3>RMIT </h3>
-                                    <p>Ik heb ervoor gekozen om aan RMIT Vietnam te studeren, omdat ik er al eens was geweest en het land geweldig vond
-                                        en dat is nog steeds zo. Ik heb Digital Film & Video en Photography gestudeerd, zonder enige ervaring vooraf. Maar 
-                                        nu heb ik in ieder geval een goede basis! Fotografie vond ik het allerleukst, omdat ik daar al een passie voor had. 
-                                        Ik heb veel geleerd en mijn kennis verder kunnen ontwikkelen. </p>
-                            
-                                    <p>Tijdens mijn studie heb ik een still-frame video, een commercial voor een fruitsoda en een korte film op basis van de still-frame
-                                        moeten maken. Dit was niet altijd even makkelijk, vooral vanwege het samenwerken in groepen met Vietnamese studenten. 
-                                        Toch heb ik ook hele lieve mensen ontmoet (al heb ik trauma's overgehouden aan een Rus, pas maar op!). Daarnaast had ik het keuzevak 
-                                        Photography 101, wat volledig individueel was. Gelukkig had ik daar een geweldige photo buddy, met wie ik door de hele stad heb gezworven 
-                                        om het authentieke Ho Chi Minh City vast te leggen. </p>
-                                    <p>Ik wil eerlijk zijn: het was niet altijd leuk. Tijdens de deadlineweek stond er zoveel druk op me dat ik letterlijk vastliep en fysiek
-                                        niets meer kon. Maar uiteindelijk maakt dat me niets uit, want de mooie momenten waren tien keer leuker dan die ene nachtmerrieweek. </p>
-
-                                    <h3>Naast School</h3>
-                                    <p>Ook heb ik een geweldige tijd gehad met de andere internationale studenten. We deden altijd leuke dingen, zelfs als het alleen maar een 
-                                        banh mi halen was. De vriendschappen die je tijdens je tijd in het buitenland maakt, zijn ontzettend waardevol. Je gaat samen een onbekend 
-                                        avontuur aan en moet alles zelf zien uit te vogelen. Na 1 keer te vragen wat voor smoothie iemand drinkt, kan je meteen je beste vriendin ontmoeten. </p>
-
-                                    <p>Ho Chi Minh City is een fantastische stad om in te wonen, met talloze winkels en vooral geweldige koffietentjes. Ik heb daar ontzettend veel
-                                        Vietnamese koffie gedronken, waardoor Nederlandse koffie nu veel te slap voor me voelt.</p>
-
-                                    <p>Als het mogelijk was, zou ik er nog steeds zijn.
-                                    </p>
-                                </article>
-                                <img src="img/RMIT.png" alt="RMIT logo">
+                                <h4>basic informatie over de weekly nerd presentatie:</h4>
+                                <p>Gsap is een API waarmee je dus alles kan animeren wat je maar wil. Tijdens de
+                                    presentaitie heeft ze vooral code stukjes laten zien dus ik zet ze wel even hier
+                                    onder:
+                                <ul>
+                                    <li>Gsap.to(".box",{duration:1, x:918})</li>
+                                    <li>Let tl = gsap.timeline(); tl.to(".box"{duration:1, x:918});</li>
+                                    <li>Gsap.utiles.random(-100,100);</li>
+                                    <li>Gsap.utils.random(["red","blue","green"])</li>
+                                    <li>Function name(){ mapWidth = gsap.utils.mapRange(0, innerWidth,-50,50); mapHeight
+                                        = gsap.utils.mapRange(0, innerHeight, -50,50);}</li>
+                                    <li>Gsap.utils.wrap([red,green,blue])</li>
+                                    <li>Gsap.utils.wrapYoyo();</li>
+                                    <li>Gsap.utils.pipe()</li>
+                                    <li>Gsap.utils.snap()</li>
+                                    <li>
+                                        matchMedia();
+                                    </li>
+                                    <li>control methods: <ul>
+                                            <li>play()</li>
+                                            <li>pause()</li>
+                                            <li>resume()</li>
+                                            <li>reverse()</li>
+                                            <li>restart()</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                </p>
+                                <h4>Mening:</h4>
+                                <p>Deze weekly nerd vond ik de leukste weekly nerd tot nu toe! Er kwamen toffe dingen voorbij en het was duidelijk uitgelegd. Alleen ben ik inmiddels wel weer bijna alles vergeten , dus ik zal zelf nog even op de website moeten duiken om te checken wat er allemaal kan.</p>
                             </section>
-                        </section>
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog3').showModal()">
                     <img src="img/RMIT.jpg" alt="university RMIT vietnam">
-                    <h2>RMIT</h2>
+                    <h2>Cassie Evans</h2>
                 </button>
             </section>
             <section>
-                <dialog id="myDialog4" aria-label="mijn doelen die k heb">
-                    <form id="dialog4" method="dialog">
+                <dialog id="myDialog4" aria-label="weeklynerd4">
+                    <form class="dialog" id="dialog4" method="dialog">
                         <div><button class="closeDialog">Terug</button>
-                            <h3>Mijn leerdoelen dit semester</h3>
+                            <h3>WEEKLY NERD 4</h3>
                         </div>
-                        <section>
-                            <h2>Mijn Doelen:</h2>
-                            <ul>
-                                <li>Meer met javascript werken</li>
-                                <li>meer verdiepen in Css animaties</li>
-                                <li>betere structuur gaan maken, meer  georganiseerd werken in VSC</li>
-                            </ul>
-                        </section>
+                        <h1>Jeremy Keith</h1>
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog4').showModal()">
                     <img src="img/doelen.png" alt="7/11 sign">
-                    <h2>Doelen</h2>
+                    <h2>Jeremy Keith</h2>
                 </button>
             </section>
+            <section>
+                <dialog id="myDialog5" aria-label="weeklynerd5">
+                    <form class="dialog" id="dialog5" method="dialog">
+                        <div><button class="closeDialog">Terug</button>
+                            <h3>WEEKLY NERD 5</h3>
+                        </div>
+                        <h1>Julia Miocene</h1>
+                    </form>
+                </dialog>
+                <button class="button" onclick="document.getElementById('myDialog5').showModal()">
+                    <img src="img/activiteit.jpg" alt="7/11 sign">
+                    <h2>Julia Miocene</h2>
+                </button>
             </section>
+            <section>
+                <dialog id="myDialog6" aria-label="weeklynerd6">
+                    <form class="dialog" id="dialog6" method="dialog">
+                        <div><button class="closeDialog">Terug</button>
+                            <h3>WEEKLY NERD 6</h3>
+                        </div>
+                        <h1>Rosa</h1>
+                        <div>
+                            <div>
+                                <h2>HACKERS UNITED</h2>
+                            </div>
+                            <div>
+                                <img src="img/hackers.jpeg" alt="hackerscollege">
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/Afgeleid.jpeg" alt="code voor kassa bon">
+                            <section>
+                                <h4>basic informatie over de weekly nerd presentatie:</h4>
+                                <p>A hacker is a person skilled in information technology.</p>
+                                <ul>
+                                    <li>KISS Keep It Simple Stupid</li>
+                                    <li> Learn By Trying</li>
+                                    <li> Bash kan een uitdaging zijn</li>
+                                    <li>YAGNI You Arent Gonna Need It</li>
+                                    <li>DRY Don't Repeat Yourself</li>
+                                </ul>
+                                <h4>Mening:</h4>
+                                <p> Ik heb niks mee gekregen van deze weekly nerd, omdat ze eerst begon over allerlei
+                                    vage voorbeelden waardoor ik niet begreep.</p>
+                                <p>Toen wilde ze een demonstratie doen met een apparaat, waar een heel vervelend geluid
+                                    uit kwam en ik vond dat echt geen prettig geluid. Hierdoor ben ik mijn concentratie
+                                    kwijt geraakt en was ik vooral geirriteerd.
+                                    Ik heb hiervan niks opgestoken.
+                                </p>
+                            </section>
+
+                        </div>
+
+                    </form>
+                </dialog>
+                <button class="button" onclick="document.getElementById('myDialog6').showModal()">
+                    <img src="img/Camera2RMIT.JPG" alt="7/11 sign">
+                    <h2>Rosa </h2>
+                </button>
+            </section>
+            <section>
+                <dialog id="myDialog7" aria-label="weeklynerd7" value="NielsLeenheer">
+                    <form class="dialog" id="dialog7" method="dialog">
+                        <div>
+                            <button class="closeDialog">Terug</button>
+                            <h3>WEEKLY NERD 7</h3>
+                        </div>
+                        <h1>Niels Leenheer</h1>
+                        <div>
+                            <div>
+                                <h2>Wat is Project Fugu?</h2>
+                                <p>Een initiatief van Google dat webtechnologie uitbreidt met krachtige API’s, zodat
+                                    webapps toegang krijgen tot hardware zoals printers, scanners en pinapparaten.</p>
+                            </div>
+                            <div>
+                                <img src="img/Kassamachines.jpeg" alt="van Horrorcollege">
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/kassabonCode.jpeg" alt="code voor kassa bon">
+                            <section>
+                                <h4>basic informatie over de weekly nerd presentatie:</h4>
+                                <p>Project Fugu is gemaakt van verschillende API, omdat het nog niet op de markt is.</p>
+                                <p>normaal gesproken moet je bij de bon een USB gebruiken, maar je kan het ook met Web
+                                    APIs doen. Dan moet je wel de taal kennen.</p>
+                                <p></p>
+                            </section>
+
+                        </div>
+                        <img src="img/kassabonCode.jpeg" alt="code voor kassa bon">
+                        <p> Project Fugu is gemaakt van verschillende API, omdat het nog niet op de markt is.</p>
+                    </form>
+                </dialog>
+                <button class="button" onclick="document.getElementById('myDialog7').showModal()">
+                    <img src="img/CameraRMIT.JPG" alt="7/11 sign">
+                    <h2>Niels Leenheer</h2>
+                </button>
+            </section>
+            <section>
+                <dialog id="myDialog8" aria-label="weeklynerd8">
+                    <form class="dialog" id="dialog8" method="dialog">
+                        <div><button class="closeDialog">Terug</button>
+                            <h3>WEEKLY NERD 8</h3>
+                        </div>
+                        <h1>?</h1>
+                    </form>
+                </dialog>
+                <button class="button" onclick="document.getElementById('myDialog8').showModal()">
+                    <img src="img/ChristmasRMIT.PNG" alt="7/11 sign">
+                    <h2>?</h2>
+                </button>
+            </section>
+
         </div>
 
     </main>
