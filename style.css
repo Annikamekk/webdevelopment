@@ -86,7 +86,9 @@ header li a {
     font-size: 1em;
     text-decoration: none;
     color: var(--black);
+    place-items: center;
 }
+
 
 header ul li:nth-of-type(1) a:visited {
     color: var(--black);
@@ -99,10 +101,12 @@ header li button {
     cursor: pointer;
 }
 
-header li img {
+header  li img {
     object-fit: contain;
     width: 1em;
     height: 1em;
+    
+    place-self: center;
 }
 
 header li:not(:has(img)) {
@@ -132,7 +136,7 @@ header li:nth-of-type(4) img {
     padding: 2em;
 }
 
-.dialog1 div:nth-of-type(1) {
+.dialog1 > div:nth-of-type(1) {
     display: flex;
     flex-direction: row;
     grid-row: 1;
@@ -141,7 +145,7 @@ header li:nth-of-type(4) img {
     align-self: center;
 }
 
-.dialog1 div:nth-of-type(1) h3 {
+.dialog1 > div:nth-of-type(1) h3 {
     height: fit-content;
     align-self: center;
     font-weight: 300;
@@ -151,37 +155,37 @@ header li:nth-of-type(4) img {
     font-size: 1em;
 }
 
+
+
 #photoContainer {
-    display: grid;
-    /* Gebruik grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(17em, 1fr));
-    /* Dynamisch aantal kolommen */
-    grid-auto-rows: minmax(max-content, auto);
-    /* Zorg ervoor dat de rijen automatisch de juiste hoogte krijgen */
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1em;
-    /* Ruimte tussen de afbeeldingen */
-    padding: 1em;
-    /* Ruimte rondom de container */
-    justify-items: center;
-    /* Zorgt ervoor dat afbeeldingen gecentreerd zijn */
-    align-items: start;
-    /* Begin met de afbeeldingen bovenaan */
-}
-
-.dialog-content img {
+    align-items: stretch;
+  }
+  
+  #photoContainer div {
+    flex-grow: 1;
+    flex-basis: 12em; /* basisgrootte voor portrait */
+    min-width: 12em;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #photoContainer div.landscape {
+    flex-basis: 30em; /* breder bij landscape */
+  }
+  
+  #photoContainer img {
     width: 100%;
-    /* Zorg ervoor dat de afbeelding de volledige breedte van de gridcel gebruikt */
     height: 100%;
-    /* Laat de hoogte automatisch aanpassen aan de breedte */
-    border-radius: .5em;
-    /* Zachte hoeken voor de afbeeldingen */
     object-fit: cover;
-    /* Zorgt ervoor dat de afbeelding netjes in de gridcel past */
-
-}
-
-
-
+    border-radius: .5em;
+    display: block;
+  }
+  
+  
 /* ------------------main----------------- */
 h1 {
     font-family: Poppins;
@@ -258,18 +262,17 @@ main>form input::placeholder {
 main>div {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 7em;
+    align-items: start;
+    margin-top: 4em;
     gap: 2em;
 }
-
 
 /* -------------------buttons onder zoekbalk----------------------- */
 .button {
     display: flex;
     flex-direction: column;
     /* Aligns child elements (image and h2) in a column */
-    justify-content: center;
+    justify-content: start;
     /* Vertically center the content inside the section */
     align-items: center;
     width: 6em;
@@ -308,6 +311,10 @@ main>div {
 form{
     margin: 1.5em;
 }
+form h4{
+    font-size: 1.5em;
+    margin: 1em 0 .5em 0;
+}
 
 ul{
     list-style-type: square;
@@ -341,6 +348,7 @@ form >div:nth-of-type(3){
     margin-top: 4em;
     display: flex;
     gap:2em;
+
 }
 .meerInfo{
     margin-top: 4em;
@@ -351,15 +359,15 @@ form >div:nth-of-type(3){
     max-width: 50%;
     object-fit: contain;
 }
-
 form >div:nth-of-type(3) h4{
     font-size:2em ;
 }
 
 form >div:nth-of-type(3) img{
     max-height: 80vh;
-    max-width: 60%;
+    max-width: 55%;
     object-fit: contain;
+    align-self: center;
 }
 
 #open_dialog1,

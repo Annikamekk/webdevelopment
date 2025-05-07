@@ -116,34 +116,25 @@ function getMyImage() {
         // console.log(myPhotos);
 
         // Zoek het element in de HTML waar je de foto's wilt plaatsen
-        let photoContainer = document.getElementById('photoContainer');
-        
-        // Zorg ervoor dat de container leeg is voordat je nieuwe foto's toevoegt
-        photoContainer.innerHTML = '';
-
-        // Loop door de foto's en voeg ze toe aan de HTML
         myPhotos.forEach(photo => {
-            // Maak een nieuw img-element voor elke foto
+            let wrapper = document.createElement('div');
             let img = document.createElement('img');
-            img.src = photo.image_url;  // Veronderstel dat elke foto een 'image_url' heeft
-            img.alt = photo.description || 'Photo';  // Beschrijving is optioneel
-
-            // Wacht tot de afbeelding geladen is om te controleren of het landscape of portrait is
-            img.onload = function() {
-                // Controleer de natuurlijke breedte en hoogte van de afbeelding
+            img.src = photo.image_url;
+            img.alt = photo.description || 'Photo';
+        
+            img.onload = function () {
                 if (img.naturalWidth > img.naturalHeight) {
-                    img.classList.add('landscape'); // Voeg de 'landscape' klasse toe voor horizontale foto's
-                    // Zorg ervoor dat de landscape afbeelding minder ruimte inneemt dan portrait
-                    img.style.gridRowEnd = "span 1"; // Landscape afbeeldingen nemen 1 rij in
+                    wrapper.classList.add('landscape');
                 } else {
-                    img.classList.add('portrait');  // Voeg de 'portrait' klasse toe voor verticale foto's
-                    img.style.gridRowEnd = "span 2"; // Portrait afbeeldingen nemen 2 rijen in
+                
                 }
             };
-
-            // Voeg de afbeelding toe aan de container
-            photoContainer.appendChild(img);
+        
+            wrapper.appendChild(img);
+            photoContainer.appendChild(wrapper);
         });
+        
+
     }).catch(error => {
         console.error('Er is een fout opgetreden:', error);
     });

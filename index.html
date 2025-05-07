@@ -20,9 +20,8 @@
                         <div><button class="closeDialog">Terug</button>
                             <h3>Foto's uit Vietnam</h3>
                         </div>
-                        <div class="dialog-content">
-                            <div id="photoContainer"></div>
-                            <!-- Dynamisch geladen afbeeldingen komen hier -->
+                        <div id="photoContainer">
+                            <!-- JS zal hier alle wrapper-divs met afbeeldingen injecteren -->
                         </div>
                     </form>
                 </dialog>
@@ -236,7 +235,10 @@
                                 </ul>
                                 </p>
                                 <h4>Mening:</h4>
-                                <p>Deze weekly nerd vond ik de leukste weekly nerd tot nu toe! Er kwamen toffe dingen voorbij en het was duidelijk uitgelegd. Alleen ben ik inmiddels wel weer bijna alles vergeten , dus ik zal zelf nog even op de website moeten duiken om te checken wat er allemaal kan.</p>
+                                <p>Deze weekly nerd vond ik de leukste weekly nerd tot nu toe! Er kwamen toffe dingen
+                                    voorbij en het was duidelijk uitgelegd. Alleen ben ik inmiddels wel weer bijna alles
+                                    vergeten , dus ik zal zelf nog even op de website moeten duiken om te checken wat er
+                                    allemaal kan.</p>
                             </section>
                     </form>
                 </dialog>
@@ -252,6 +254,89 @@
                             <h3>WEEKLY NERD 4</h3>
                         </div>
                         <h1>Jeremy Keith</h1>
+                        <div>
+                            <div>
+                                <h2>Declarative Design</h2>
+                                <p>*geen eigen fotos gemaakt tijdens deze presentatie</p>
+                            </div>
+                            <div>
+                                <img src="img/DeclarativeDesign.jpg" alt="jeremy keith">
+                            </div>
+                        </div>
+                        <div>
+
+                            <section>
+                                <h4>basic informatie over de weekly nerd presentatie:</h4>
+                                <p>imperative programming</p>
+                                <ol>
+                                    <li>Create an array of items</li>
+                                    <li>Loop through each item</li>
+                                </ol>
+                                <p>How to behave like a button - with javascript - imparative</p>
+                                <ul>
+                                    <li>Imperative > javascript > div acts like a button</li>
+                                    <li>Declarative > html > button element</li>
+                                </ul>
+                                <p>
+                                    jeremy Keith said "javascript should only do what javascript can do"
+                                </p>
+                                <p>if you invent from scratch you have total control. </p>
+                                <p>met padding-inline-start is het padding-left, maar als je computer is ingesteld in
+                                    als je vanaf rechts naar links leest word het omgedraaid! - inclusief. </p>
+                                <p>voor makkelijk responsive font size: font-size:calc(0.5rem + .666vw); of
+                                    Font-size:clamp(1rem,0.5rem +.666vw, 1.5rem);</p>
+                                <p><a href="https://utopia.fyi/">Utopia.Fyi</a> is een gemakkelijke website waar je goed
+                                    responsive design tips krijgt met @min en @max scaling het groeit nu heel soepel in
+                                    elkaar van mobiel naar groter scherm!!</p>
+                                <p>Functies in css die handig kunnen zijn:
+                                <ul>
+                                    <li>Calc()</li>
+                                    <li>clamp()</li>
+                                    <li>min and max()</li>
+                                    <li>fit-content()</li>
+                                    <li>Min- max-content()</li>
+                                    <li>repeat()</li>
+                                    <li>minmax()</li>
+                                </ul>
+                                </p>
+                            </section>
+                        </div>
+                        <div class="meerInfo">
+                            <img src="img/Imperativevs.jpg" alt="gsap code">
+                            <div>
+
+                                <h4>Is declarative beter dan imperative?</h4>
+                                <p>Wat is het verschil tussen Declarative en imperative?:</p>
+                                <p>Imperative is eigenlijk stap voor stap uitleggen wat je wil zien. Je focust op de
+                                    manier waarop iets gebeurt. Declarative is wat je wil bereiken en het systeem
+                                    bepaalt hoe
+                                    het gedaan wordt. Je focust op het doel of de uitkomst. verschil:
+                                <ul>
+                                    <li>Imperative is hoe je het wil bereiken en Declarative is wat je wil bereiken.
+                                    </li>
+                                    <li>Imperative beheer je alle stappen en bij declarative beheert het syteem je
+                                        stappen.</li>
+                                    <li>Imperative moet je meer code schrijven omdat het dus stap voor stap wordt
+                                        gedaan.</li>
+                                    <li>Imperative heeft meer kansen om fouten te maken, maar Declarative jusit weer
+                                        Minder controle, soms minder flexibel. </li>
+                                </ul>
+                                En wat is beter, Imperative of Declarative? Het hangt van de situatie af.
+                                </p>
+
+                            </div>
+                        </div>
+                        <h4>Mening:</h4>
+                        <p>Ik denk dat ik op dit moment meer Imperative ben, omdat ik het stap voor stap wil uitleggen
+                            en zo dat ik het dus begrijp. Ik wil wel liever naar de Declarative kant gaan, omdat het wel
+                            gewoon makkelijker is en sneller. </p>
+                        <p>Daarnaast vond ik het ook wel interessant hoe er eigenlijk twee kanten zijn in het schrijven
+                            van code taal, ik heb daar namelijk nooit overnagedacht. Hoewel ik niet bewust ga nadenken
+                            over hoe ik het declarative of imperative moet gaan schrijven, vind ik het wel 'fijn' om het
+                            in mijn achterhoofd te hebben als het toch ooit aan bod komt! </p>
+                        <p>En als ik het over de presentatie mag gaan hebben, vond ik het heel saai, want hij vertelde
+                            het niet heel erg met emoties. ik zag wel dat hij er echt een passie voor had wat ik leuk
+                            vond om te zien. maar ik raak snel afgeleid en dat gebeurde hier ook helaas. </p>
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog4').showModal()">
@@ -266,6 +351,34 @@
                             <h3>WEEKLY NERD 5</h3>
                         </div>
                         <h1>Julia Miocene</h1>
+                        <div>
+                            <div>
+                                <h2>CSS only Character Modeling</h2>
+                            </div>
+                            <div>
+                                <img src="img/JuliaMicone.jpg" alt="scrollanimation">
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/noodleboy.gif" alt="code voor kassa bon">
+                            <section>
+                                <h4>basic informatie over de weekly nerd presentatie:</h4>
+                                <p>ze liet tijdens haar presentatie vooral voorbeelden zien van haar werk en heeft ze
+                                    haar code van die animatie laten zien. </p>
+                                <img src="img/block.jpg" alt="css girl running">
+                                <p>Ik kan je wel vertellen dat ik haar super gaaf vind, met wat ze allemaal kan met css.
+                                    Ik heb haar website bekeken <a href="https://miocene.io/" target="_blank">Julia
+                                        Miocene's Website!</a> en er zitten echt super handige tips in!</p>
+                            </section>
+
+                        </div>
+                        <h4>Mening:</h4>
+                        <p> Ik wist niet dat dit een WeeklyNerd was en ik was ook te laat, waardoor ik eerste deel niet
+                            heb meegekregen. Toen ik er wel was heb ik zitten luisteren maar geen aantekeningen en fotos
+                            gemaakt, omdat ik dus niet wist dat zij de weekly nerd was. Het werk wat ze liet zien, was
+                            best cool. Het lijkt me wel veel werk als je bijvoorbeeld die mug wil namaken met elk
+                            onderdeel een andere animatie geven en ook nog smooth. Ik kan haar tips wel toepassen in mijn projecten denk ik. 
+                        </p>
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog5').showModal()">
@@ -302,7 +415,7 @@
                                 </ul>
                                 <h4>Mening:</h4>
                                 <p> Ik heb niks mee gekregen van deze weekly nerd, omdat ze eerst begon over allerlei
-                                    vage voorbeelden waardoor ik niet begreep.</p>
+                                    vage voorbeelden waardoor ik het niet meer begreep.</p>
                                 <p>Toen wilde ze een demonstratie doen met een apparaat, waar een heel vervelend geluid
                                     uit kwam en ik vond dat echt geen prettig geluid. Hierdoor ben ik mijn concentratie
                                     kwijt geraakt en was ik vooral geirriteerd.
@@ -348,8 +461,6 @@
                             </section>
 
                         </div>
-                        <img src="img/kassabonCode.jpeg" alt="code voor kassa bon">
-                        <p> Project Fugu is gemaakt van verschillende API, omdat het nog niet op de markt is.</p>
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog7').showModal()">
@@ -363,12 +474,73 @@
                         <div><button class="closeDialog">Terug</button>
                             <h3>WEEKLY NERD 8</h3>
                         </div>
-                        <h1>?</h1>
+                        <h1>Erik Kroes</h1>
+                        <div>
+                            <div>
+                                <h2>WCAG - Web Content Accesibility Guidelines</h2>
+                            </div>
+                            <div>
+                                <img src="img/accesibilityMeme.jpeg" alt="scrollanimation">
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/accesibility.jpeg" alt="code voor kassa bon">
+                            <section>
+                                <h4>basic informatie over de weekly nerd presentatie:</h4>
+                                <p>Keyboard is better for everyone! test it on your own computer with tab and shift tab.
+                                </p>
+                                <p>meest algemene problemen voor screenreaders:
+                                <ul>
+                                    <li>geen skip link (bijvoorbeeld de navigatie)</li>
+                                    <li>Uncontrolled focus state</li>
+                                    <li> de div die gebruikt word als button ipv de button element.</li>
+                                </ul>
+                                </p>
+                                <p>Contrast is heel belangrijk! -wat als het zonnig is?</p>
+                                <h5>hoe test je de contrast?
+                                </h5>
+                                <p>contrast ratio van TEN MINSTE 3:1 voor grote teksten en kleine teksten 4.5:1 - en dat
+                                    is het minimum. </p>
+                                <h5>meest voorkomende problemen:</h5>
+                                <ul>
+                                    <li>placeholder - zet het boven het input veld</li>
+                                    <li>branding colors</li>
+                                    <li>states</li>
+                                </ul>
+                                <h5>hoe test je voor alternatives?
+                                </h5>
+                                <ul>
+                                    <li>captions onder videos</li>
+                                    <li>transcript voor podcasts</li>
+                                    <li>alt text voor img - met echte waardevolle tekst over de img zelf als het inhoud
+                                        bevat</li>
+                                </ul>
+
+                                <h5>meest voorkomende problemen:</h5>
+                                <ul>
+                                    <li>img in buttons</li>
+                                    <li>video content zonder closed captions</li>
+                                </ul>
+                            </section>
+
+                        </div>
+                        <h4>Mening:</h4>
+                        <p>Ik vind zelf dat CMD altijd heel erg richt op de accesibility van het bouwen van websites.
+                            Ook vind ik dit super goed wat ze doen, omdat het wel belangrijk is. Alleen om het altijd
+                            over dezelfde dingen te hebben, vind ik super onnodig want de meeste dingen zijn mij al
+                            verteld in afgelopen jaren en zelfs deze minor. Ik heb de tweede Gesprek met Nienke gemist
+                            dus daar kan ik niks over vertellen. </p>
+                        <p>Over de Closed Captions voor ik wel een goed punt, want ik heb daar ook te maken gehad als ik
+                            iets keek wat in een andere taal was en boden ze geen engelse of nederlandse captions. Dit
+                            vind ik zelf ook vervelend en ik begrijp ook echt waar ze vandaan komen ( net zoals de
+                            alternatieve teksten voor de images, want die kloppen ook meestal niet). Ik vind zeker dat
+                            er meer mensen hier aan moeten houden en een verbeterde wereld van maken. Inclusiviteit is
+                            belangrijk en zeker nu een ding op de wereld.</p>
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog8').showModal()">
                     <img src="img/ChristmasRMIT.PNG" alt="7/11 sign">
-                    <h2>?</h2>
+                    <h2>Erik Kroes</h2>
                 </button>
             </section>
 
