@@ -13,7 +13,46 @@
 <body>
     <header>
         <ul>
-            <li><a href="mailto:annika.mekkelholt@gmail.com">Gmail</a></li>
+            <li>
+                <dialog id="myDialogHackaton" aria-label="hackaton reflectie">
+                    <form class="dialog" id="Hackaton" method="dialog">
+                        <div><button class="closeDialog">Terug</button>
+                            <h3>Hackaton</h3>
+                        </div>
+                        <h4>Reflectie</h4>
+                        <div>
+                            <div>
+                                <h5>Inzichten</h5>
+                                <p>Dit is een Een week project van eigenlijk 4 dagen. Eigenlijk was ik de hele week best ziek, maar ben twee dagen wel naar school gegaan en heb wel wat kunnen doen. Ik was verantwoordelijk voor de carousel en heb me daarin verdiept. Met de Chrome <a href="https://developer.chrome.com/blog/carousels-with-css" target="_blank">Canary Carousels</a> Heb ik onze carousel dus gebouwd. Dit vak moest ik herkansen, omdat ik de helft natuurlijk heb gemist. Mijn plan was om de kaartjes beter te maken, omdat ik ze echt lelijk vind en de card 'ben jij de volgende?'</p>
+                                
+                            </div>
+                            <div>
+                                <h5>Reflectie</h5>
+                                <p>Het is voor mij een beetje apart project. Ik heb namelijk de helft gemist, waardoor ik niet goed weet hoe ik reflecteren. Team verband ging super goed en kwamen snel op een idee en voerden we onze eigen taken die we hebben opgebouwd goed uit. Voor mij vond ik de hackaton een beetje onnodig, want het is maar een week project en zo veel krijg je er ook niet uit. Je werkt wel snel aangezien je weet dat het snel af moet zijn. </p>
+                                <p>Daarnaast heb ik geexperimenteerd met de CSS only carousels, dus we hebben wel wat geleerd!!</p>
+                            </div>
+                           
+                        </div>
+                        <p>*Nieuwe versie werkt nog niet met de Map</p>
+                        <div class="img">
+                            <img src="img/HackatonLelijkl.png" alt="oude versie van mijn hackaton carousel">
+                                <img src="img/newVersion.png" alt="">
+                                <img src="img/areyounext.png" alt="">
+                        </div>
+                       <div class="leerdoelen">
+                        <h4>Leerdoelen:</h4>
+                            <div>
+                                <p>Ik vind het belangrijk om accesibility op 1 te zetten, dus daar wil ik met de meesterproef aan de slag.</p>
+                                <p> Gestructureerd werken, als in oude code verwijderen en netjes onder elkaar, goede classnamen. georganiseerd werken om beter team verband.</p>
+                                <p>aantekeningen en documentatie schrijven in mijn code. </p>
+                            </div>
+                       </div>
+                    </form>
+                </dialog>
+                <button onclick="document.getElementById('myDialogHackaton').showModal()">
+                    Reflectie&Leerdoelen
+                </button>
+            </li>
             <li>
                 <dialog id="Fotos" aria-label="Fotos uit vietnam">
                     <form class="dialog1" id="FotosVietnam" method="dialog">
@@ -35,7 +74,7 @@
     </header>
     <main>
         <h1>
-            Annika
+           
         </h1>
         <form id="searchForm" onsubmit="searchFunction(event)">
             <input type="text" placeholder="Zoek..." required>
@@ -458,8 +497,10 @@
                                 <p>normaal gesproken moet je bij de bon een USB gebruiken, maar je kan het ook met Web
                                     APIs doen. Dan moet je wel de taal kennen.</p>
                                 <p></p>
+                                <h4>Mening:</h4>
+                                <p> 
+                                </p>
                             </section>
-
                         </div>
                     </form>
                 </dialog>

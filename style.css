@@ -101,7 +101,7 @@ header li button {
     cursor: pointer;
 }
 
-header  li img {
+header  li > img {
     object-fit: contain;
     width: 1em;
     height: 1em;
@@ -121,6 +121,25 @@ header li:nth-of-type(4) img {
     height: 2em;
     border-radius: 50%;
     border: .1em solid var(--white);
+}
+
+.img img{
+    width: 32%;
+    height: 20em;
+    border: .1em solid rgba(167, 203, 203, 0.335);
+}
+
+.leerdoelen div{ 
+    display: flex;
+}
+
+.leerdoelen p{
+    padding: 1.5em ;
+    background-color: rgba(167, 203, 203, 0.335);
+    border-left: .5em solid rgb(167, 203, 203);
+    margin: 1em;
+    border-radius: 1em;
+    width: 40%;
 }
 
 /* -------------foto dialog------------------- */
@@ -377,7 +396,8 @@ form >div:nth-of-type(3) img{
 #open_dialog5,
 #open_dialog6,
 #open_dialog7,
-#open_dialog8 {
+#open_dialog8,
+#open_Hackaton {
     margin: 0 auto;
 }
 
@@ -388,7 +408,8 @@ form >div:nth-of-type(3) img{
 #myDialog5 ,
 #myDialog6,
 #myDialog7,
-#myDialog8 {
+#myDialog8,
+#myDialogHackaton {
     border: none;
     border-radius: 2em;
     margin: auto;
