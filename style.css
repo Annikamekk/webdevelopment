@@ -129,17 +129,23 @@ header li:nth-of-type(4) img {
     border: .1em solid rgba(167, 203, 203, 0.335);
 }
 
-.leerdoelen div{ 
+.leerdoelen > div{ 
     display: flex;
 }
 
-.leerdoelen p{
+.leerdoelen >div div{
     padding: 1.5em ;
     background-color: rgba(167, 203, 203, 0.335);
     border-left: .5em solid rgb(167, 203, 203);
+    border-bottom:.5em solid rgb(131, 175, 175);
     margin: 1em;
     border-radius: 1em;
     width: 40%;
+}
+.leerdoelen h5{
+    color: rgb(167, 203, 203);
+    font-size: 1.4em;
+    padding-bottom: 1em ;
 }
 
 /* -------------foto dialog------------------- */
