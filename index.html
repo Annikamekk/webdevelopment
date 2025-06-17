@@ -19,7 +19,7 @@
                         <div><button class="closeDialog">Terug</button>
                             <h3>Hackaton</h3>
                         </div>
-                        <h4>Reflectie</h4>
+                        <h2>Reflectie</h2>
                         <div>
                             <div>
                                 <h5>Inzichten</h5>
@@ -55,28 +55,119 @@
                         <div class="leerdoelen">
                             <h4>Leerdoelen:</h4>
                             <div>
-                                <div>
-                                    <h5>Toegankelijkheid op nummer 1</h5>
-                                    <p>Cmd heeft ons er op aan gedrukt dat toegankelijkheid heel belangrijk is. Daar ben
-                                        ik het zeker mee eens, alleen ik heb eigenlijk nooit veel aandacht aan besteed
-                                        en zoals de alt teksten in mijn img verwaarloosd. Ik wil meer aandacht besteden
-                                        aan de toegankelijkheid van mijn website. </p>
-                                </div>
-                                <div>
-                                    <h5>georganiseerd werken in team verband</h5>
-                                    <p> Afgelopen weken heb ik gemerkt dat ik heel slordig werk en nog oude code heb
-                                        laten staan en dingen verkeerd heb genoemd, of CamelCase en Snake_case door
-                                        elkaar te gebruiken. Als ik dit zo door ga, dan heeft mijn groepje moeite om mijn code te begrijpen en ik wil dat dus voorkomen. 
-                                        Ik wil daarmee zeggen dat ik graag georganiseerd en gestructureerd wil gaan werken voor goede overzicht. - dus ook betere documentatie. 
-                                        </p>
-                                </div>
-                                <div>
-                                    <h5>Meer out-of-the-box denken</h5>
-                                    <p>Omdat we vaak snel een idee moeten bedenken om het project te beginnen, kies ik meestal een idee wat mij 'makkelijk' lijkt en zeker te behalen is en durf ik niet dingen te doen wat ik nog niet ken. Ik heb een gevoel dat ik nog bij de basis ben, maar dat ben ik niet en ik wil meer kunnen doen. Daar bedoel ik mee, meer experimenteren met animaties, css shapes en javascript!</p>
-                                </div>
+
+                                <h5><a href="#toegankelijkheid">Toegankelijkheid</a></h5>
+                                <p>Cmd heeft ons er op aan gedrukt dat toegankelijkheid heel belangrijk is. Daar ben
+                                    ik het zeker mee eens, alleen ik heb eigenlijk nooit veel aandacht aan besteed
+                                    en zoals de alt teksten in mijn img verwaarloosd. Ik wil meer aandacht besteden
+                                    aan de toegankelijkheid van mijn website. </p>
+
+                                <h5><a href="#georganiseerd">georganiseerd werken</a></h5>
+                                <p> Afgelopen weken heb ik gemerkt dat ik heel slordig werk en nog oude code heb
+                                    laten staan en dingen verkeerd heb genoemd, of CamelCase en Snake_case door
+                                    elkaar te gebruiken. Als ik dit zo door ga, dan heeft mijn groepje moeite om
+                                    mijn code te begrijpen en ik wil dat dus voorkomen.
+                                    Ik wil daarmee zeggen dat ik graag georganiseerd en gestructureerd wil gaan
+                                    werken voor goede overzicht. - dus ook betere documentatie.
+                                </p>
+
+                                <h5><a href="#experimenteren">experimenteren</a></h5>
+                                <p>Omdat we vaak snel een idee moeten bedenken om het project te beginnen, kies ik
+                                    meestal een idee wat mij 'makkelijk' lijkt en zeker te behalen is en durf ik
+                                    niet dingen te doen wat ik nog niet ken. Ik heb een gevoel dat ik nog bij de
+                                    basis ben, maar dat ben ik niet en ik wil meer kunnen doen. Daar bedoel ik mee,
+                                    meer experimenteren met animaties, css shapes en javascript!</p>
+
 
 
                             </div>
+                            <section class="progress">
+                                <h2>Process</h2>
+
+                                <h5 id="toegankelijkheid">toegankelijkheid</h5>
+                                <div>
+                                    <div>
+                                        <p>Ik heb me in deze periode vooral gericht op de toegankelijkheid, omdat dit in
+                                            deze wat vreemde vijf weken eigenlijk het meest haalbare onderdeel was om
+                                            aan te
+                                            werken. Mijn doel was om de tab-volgorde goed in te richten. Dat is
+                                            grotendeels
+                                            gelukt, met uitzondering van de filters, waar het wat lastiger bleek. Voor
+                                            de
+                                            rest van de pagina werkt het navigeren met het toetsenbord zoals bedoeld.
+                                            Bij de
+                                            filters liep ik echter vast; ik wist niet goed hoe ik daar efficiënt uit kon
+                                            komen, waardoor je nu verplicht alle filteropties moet doorlopen. Helaas
+                                            ontdekte ik dit pas laat, toen Lorenzo er ook al mee bezig was. Verder heb
+                                            ik
+                                            ervoor gezorgd dat elke focus state duidelijk zichtbaar is door een
+                                            <code>outline: 0.1em solid var(--color-darker);</code> toe te passen.
+                                        </p>
+                                        <img src="img/Focus-state.png" alt="">
+                                    </div>
+                                    <div id="georganiseerd">
+                                        <p>Ik zie hier in de foto dat het niet helemaal klopt, maar de
+                                            <code> role="button"</code> laat zien aan de
+                                            screenreader dat hij als button dus dient.
+                                            <code>aria-expanded="false"</code>
+                                            laat weten dat hij dichtgeklapt is.<code>aria-controls="filtersForm"</code>
+                                            zegt waar hij voor is, dus wel ID hij gekoppeld mee is, alleen wij hebben
+                                            geen
+                                            filtersForm het moet filters zijn. <code>tabindex="0"</code> gaat hij met de
+                                            screenreader er toch heen, ook al is het geen officiele link element, wat
+                                            super handig is.
+                                        </p>
+                                        <img src="img/LabelActsButton.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p>
+                                            Ik heb ook andere dingetjes er in toegevoegd zoals
+                                            <code>class="visually-hidden"</code> waardoor de screenreader wel gaat lezen
+                                            waar de <code>&lt;button&gt;'lees meer'&lt;/button&gt;</code> voor is en zo
+                                            kunnen ze sneller door.
+                                            Later zat ik er ook aan te denken om een knop te maken met 'ga naar
+                                            resultaten' om
+                                            maar helemaal uit me hoofd geschoten.
+                                        </p>
+                                        <img src="img/visually-hidden.png" alt="">
+                                    </div>
+                                </div>
+                                <h5 id="georganiseerd">georganiseerd werken </h5>
+                                <div>
+                                    <p>Als ik eerlijk ben, twijfel ik of ik tijdens dit project echt gestructureerd
+                                        genoeg heb gewerkt. Ik heb relatief weinig gebruik gemaakt van classes en IDs,
+                                        waardoor ik moeilijk kan inschatten hoe georganiseerd mijn code daadwerkelijk
+                                        was. Lorenzo en ik hebben onze CSS apart geschreven en later samengevoegd. Voor
+                                        mij was mijn deel duidelijk, maar ik merkte dat Lorenzo in het begin moeite had
+                                        om mijn code goed te begrijpen.
+                                    </p>
+                                    <p>
+                                        Doordat we de eerste drie weken vooral met onderzoek bezig waren en ik in die
+                                        periode nauwelijks heb gecodeerd, voelde het in week 4 alsof ik opnieuw moest
+                                        beginnen. Dat gaf me een gevoel van haast, ik dacht vooral: “we móeten dit
+                                        halen.” Die druk zorgde ervoor dat mijn aanpak chaotisch werd. Achteraf zie ik
+                                        in dat ik meer aandacht had moeten besteden aan structuur en documentatie.
+                                    </p>
+                                    <p>
+                                        Desondanks hebben we als groep goed overzicht weten te houden, onder andere door
+                                        de CSS te verdelen over meerdere bestanden. Dat werkte prettig en hielp ons om
+                                        het geheel beheersbaar te houden.
+
+                                    </p>
+                                    <p>Bij het schrijven van de <strong>Weekly Nerd blog</strong> heb ik bewust
+                                        geprobeerd om mijn code gestructureerd te houden.
+                                        Toch merkte ik tijdens het schrijven van mijn voortgang dat het slecht html
+                                        geschreven was. Ik liep constant tegen
+                                        foutmeldingen en errors aan, wat soms best frustrerend was. In plaats van alles
+                                        te verwijderen en opnieuw te beginnen,
+                                        heb ik ervoor gekozen om stap voor stap mijn code te herschrijven. Daarbij heb
+                                        ik de CSS beter georganiseerd door stijlen
+                                        logisch te nesten en overbodige elementen te verwijderen. Dat hielp niet alleen
+                                        om overzicht te creëren, maar gaf me ook meer controle over de structuur van
+                                        mijn werk.
+                                    </p>
+                                </div>
+                            </section>
                         </div>
                     </form>
                 </dialog>
@@ -86,7 +177,7 @@
             </li>
             <li>
                 <dialog id="Fotos" aria-label="Fotos uit vietnam">
-                    <form class="dialog1" id="FotosVietnam" method="dialog">
+                    <form class="dialog" id="FotosVietnam" method="dialog">
                         <div><button class="closeDialog">Terug</button>
                             <h3>Foto's uit Vietnam</h3>
                         </div>
@@ -115,42 +206,122 @@
             <section>
                 <dialog id="myDialog1" aria-label="weekly nerd1">
                     <form class="dialog" id="dialog1" method="dialog">
-                        <div><button class="closeDialog">Terug</button>
+                        <div>
+                            <button class="closeDialog">Terug</button>
                             <h3>WEEKLY NERD 1</h3>
                         </div>
-                        <h1>Kilian Valkhof</h1>
                         <div>
-                            <div>
-                                <h2>Rule of least power</h2>
-                            </div>
-                            <div>
-                                <img src="img/WN1Scrollanimation.jpeg" alt="scrollanimation">
-                            </div>
+                            <section>
+                                <h1><a href="https://kilianvalkhof.com/about/" target="_blank">Kilian Valkhof</a></h1>
+                                <p>Kilian Valkhof is een veelzijdige front-end developer en user experience designer,
+                                    met een brede interesse
+                                    in alles wat de gebruikerservaring beïnvloedt — van back-end tot devops. Hij
+                                    omschrijft zichzelf het liefst als een "user experience developer", maar werd ooit
+                                    treffend een "strange generalist" genoemd, wat ook goed bij hem past. Kilian bouwt
+                                    tools die ontwerpers en ontwikkelaars helpen effectiever en met meer plezier te
+                                    werken aan het web. Hij schrijft regelmatig over toegankelijkheid, design tools en
+                                    zijn visie op het web. Daarnaast is hij actief binnen het Electron governance team
+                                    en deelt hij zijn kennis graag via blogs en lezingen. Zijn professionele
+                                    uitvalsbasis is Firstversionist.</p>
+                            </section>
+                            <img src="img/kilian_valkhof.jpeg" alt="kilian_valkhof face">
                         </div>
-                        <div>
+                        <article>
+                            <section>
+                                <h2>Rule of least Power</h2>
+                                <p>Van de drie webtalen is JavaScript het meest gevoelig voor fouten, gevolgd door CSS,
+                                    terwijl HTML doorgaans het meest stabiel en betrouwbaar is. Dit past goed bij het
+                                    principe van progressive enhancement, waarbij een website in de basis functioneel
+                                    blijft, zelfs als geavanceerde functies uitvallen. Het idee is dat je vanaf een
+                                    solide fundament werkt en geleidelijk extra lagen toevoegt. Er bestaat een treffend
+                                    gezegde: “Wat je eenmaal geleerd hebt, hoef je niet opnieuw te leren.” In
+                                    webontwikkeling betekent dat vaak dat wat je vandaag bouwt, morgen nog steeds werkt.
+                                    Toch verandert de technologie voortdurend. Wat nu de standaard is, kan morgen
+                                    verouderd zijn. Daarom loont het om steeds op zoek te gaan naar slimmere,
+                                    efficiëntere manieren om hetzelfde doel te bereiken.
+                                </p>
+                            </section>
+                            <section>
+                                <h2>custom switches</h2>
+                                <p>
+                                    Custom switches kun je heel goed maken met een standaard
+                                    <code>&lt;inputtype="checkbox"&gt;</code>.
+                                    Door <code>appearance: none</code> toe te passen, haal je de standaard browserstijl
+                                    weg
+                                    en kun je de checkbox volledig zelf stijlen — bijvoorbeeld als een
+                                    aan/uit-schakelaar.
+                                </p>
+                                <p>
+                                    Het voordeel is dat de checkbox nog steeds werkt zoals bedoeld: hij is toegankelijk,
+                                    werkt in formulieren, en je kunt via <code>:checked</code> eenvoudig reageren met
+                                    CSS of JavaScript.
+                                    Zo combineer je flexibiliteit in design met goede gebruikerservaring en
+                                    functionaliteit.
+                                </p>
+                            </section>
+                        </article>
+                        <section>
+                            <h2>overal:
+
+                            </h2>
+                            <p>
+                                Begin bij het maken van webinterfaces altijd met HTML – de minst krachtige maar meest
+                                robuuste taal. Vanuit daar kun je uitbreiden met CSS en eventueel JavaScript. Er zijn
+                                veel handige technieken om het meeste uit HTML en CSS te halen.
+                            </p>
+
+                            <p>
+                                Zo kun je bijvoorbeeld een checkbox gebruiken als basis voor een custom switch. Door
+                                <code>appearance: none</code> toe te passen, haal je de standaard stijl weg en kun je
+                                het element volledig zelf vormgeven als een aan/uit-schakelaar met animaties en
+                                kleurveranderingen.
+                            </p>
+
+                            <p>
+                                Met de <code>:checked</code>-selector kun je reageren op de status van een input, wat
+                                heel krachtig is in combinatie met visuele veranderingen. Daarnaast kun je met
+                                <code>accent-color</code> de standaardkleur van formulierelementen zoals checkboxes,
+                                sliders en radio-buttons aanpassen.
+                            </p>
+
+                            <p>
+                                Als je werkt met ankers en vaste headers, dan is <code>scroll-margin-top: 100px;</code>
+                                erg handig. Hiermee voorkom je dat een doel-element tegen de bovenrand van het scherm
+                                geplakt zit wanneer je er naartoe scrolt.
+                            </p>
+
+                            <p>
+                                Wil je visueel aangeven waar iemand naartoe is gesprongen op een pagina? Dan kun je
+                                gebruikmaken van <code>:target</code>, gecombineerd met een <code>outline</code> en een
+                                <code>transition</code> voor een vloeiende overgang. Zo wordt het gelinkte element
+                                tijdelijk geaccentueerd.
+                            </p>
+
+                            <p>
+                                Voor geanimeerde elementen zoals een <code>&lt;dialog&gt;</code> kun je met
+                                <code>@starting-style</code> bepalen hoe het element er uitziet vóór de animatie begint.
+                                Dit geeft meer controle over het startpunt van transities, zoals bijvoorbeeld een lagere
+                                opacity of een kleinere schaal.
+                            </p>
+
+                            <p>
+                                Met de nieuwe <code>:has()</code>-selector kun je CSS logica toevoegen die vergelijkbaar
+                                is met een "if-statement". Bijvoorbeeld: <code>form:has(input:checked)</code> geeft je
+                                de mogelijkheid om stijlen toe te passen op een element, afhankelijk van de inhoud. Dit
+                                opent veel nieuwe ontwerpopties zonder JavaScript.
+                            </p>
+
+                            <p>
+                                Tot slot kun je met <code>::picker</code> en <code>appearance: base-select;</code> in
+                                Chrome de dropdown van een <code>&lt;select&gt;</code> zelf stylen. Zo kun je afwijken
+                                van de standaard verticale weergave en bijvoorbeeld een meer horizontale layout maken.
+                            </p>
+
+                        </section>
+                        <div class="Mening">
                             <img src="img/easeCodeWN1.jpeg" alt="code voor kassa bon">
                             <section>
-                                <h4>basic informatie over de weekly nerd presentatie:</h4>
-                                <p>kies de minst krachtige taal, dus begin met html! </p>
-                                <p>hierin vertelde hij allemaal handige tips om te gebruiken, zoals:
-                                <ul>
-                                    <li>custom switches</li>
-                                    <li>inputs - met styling de appearance none</li>
-                                    <li>:checked gebruiken</li>
-                                    <li>input{ accent-color:;}</li>
-                                    <li>scroll-margin-top met bijvoorbeeld 100px. -werkt als je scrollt en blijft het
-                                        een margin aanhouden bij het volgnde gedeelte.</li>
-                                    <li>#my-target:target{outline:.1em solid #;, transition;} om border aan te geven van
-                                        het volgende kopje 'highlight waar je naar toe scrollt/klikt. </li>
-                                    <li>@starting-style{ opacity:0; transform:scale(.8)} het start punt van de dialog
-                                    </li>
-                                    <li>:has het is een if statement eigenlijk 'als de section een h2 heeft dan doe dit'
-                                        bijv form:has(input:checked) input{color:red;}</li>
-                                    <li>select voor dropdown. ::picker(select){ appearance:base-select; - dit wekt
-                                        alleen in chrome, maar je zegt hiermee ik stijl het zelf, zoasl niet onder
-                                        elkaar dropdown maar naast elkaar.}</li>
-                                </ul>
-                                </p>
+
                                 <h4>Mening:</h4>
                                 <p> Dit was de eerste weekly nerd die we hadden, en ik vond het in het begin saai omdat
                                     we de code die we kregen allemaal al wisten eigenlijk. maar ook fijn dat we het weer
@@ -166,7 +337,7 @@
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog1').showModal()">
-                    <img src="img/feitjes.jpg" alt="ikzelf">
+                    <img src="img/kilian_valkhof.jpeg" alt="ikzelf">
                     <h2>Kilian Valkhof</h2>
 
                 </button>
@@ -177,84 +348,109 @@
                         <div><button class="closeDialog">Terug</button>
                             <h3>WEEKLY NERD 2</h3>
                         </div>
-                        <h1>Kars Alfrink</h1>
                         <div>
-                            <div>
-                                <h2>Contestable AI, Building Democratic Control over Public AI</h2>
-                            </div>
-                            <div>
-                                <img src="img/ContestableAI.jpeg" alt="scrollanimation">
-                            </div>
+                            <section>
+                                <h1><a href="https://www.tudelft.nl/io/over-io/personen/alfrink-cp" target="_blank">Kars
+                                        Alfrink</a></h1>
+                                <p>Kars Alfrink is ontwerper en onderzoeker op het snijvlak van technologie, samenleving
+                                    en spel. Hij promoveerde aan de TU Delft op het thema contestable AI, waarbij hij
+                                    onderzoekt hoe kunstmatige intelligentie zó ontworpen kan worden dat burgers er
+                                    actief invloed op kunnen uitoefenen. Met een achtergrond in interaction design en
+                                    ervaring in zowel de creatieve industrie als de academische wereld, combineert
+                                    Alfrink praktijkgericht denken met kritisch onderzoek. Zijn werk richt zich op het
+                                    ontwikkelen van publieke, betwistbare technologie die sociale waarden centraal
+                                    stelt.</p>
+                            </section>
+                            <img src="img/Kars_Alfrink.webp" alt="Kars Alfrink face">
                         </div>
                         <div>
                             <section>
-                                <h4>basic informatie over de weekly nerd presentatie:</h4>
-                                <p>1. Defining Contestable AI </p>
-                                <p>"the use of feedback-adjusted data analysis and processing to argument, support or
-                                    automate policy execution in the public sector." <br> "public AI systems impact
-                                    peoples autonomy" - benodigde conditions:
-                                <ol>
-                                    <li>accurated beliefs</li>
-                                    <li>act on your plans</li>
-                                </ol>
-                                aka veel onderzoek doen en veel testen!
-                                </p>
-                                <p>Op dit moment is contested AI een groot ding en cat contested AI inhoudt is:</p>
-                                <p>verwijst naar systemen of toepassingen van AI die onderwerp zijn van
-                                    maatschappelijke, ethische of juridische discussies. maar dit word negatief
-                                    bekritiseerd, omdat er gevolgen zijn zoals bias, gebrek aan transparantie of inbreuk
-                                    op privacy. Er worden beslissingen genoemen zonder duidelijke uitleg.</p>
-                            </section>
-                        </div>
-                        <div class="meerInfo">
-                            <img src="img/contestabilityLoopsAI.jpeg" alt="hele loop van AI onderzoek etc">
-                            <div>
+                                <h2>Onderdeel 1: Definiëren van Contestable AI</h2>
                                 <p>
-                                    We moeten naar Contestable AI gaan, want die kan betwist worden. Met betwist word er
-                                    bedoeld dat het ontwerp is ingericht om menselijke tussenkomst en betwisting
-                                    mogelijk te maken. Dus gebruikers kunnen de beslissingen van het systeem makkelijker
-                                    begrijpen
-                                    of zelfs corrigeren. Dit biedt veel meer transparantie en herziening aan. Als
-                                    voorbeeld wil
-                                    ik geven, met de telefoon in de auto, je krijgt een boete omdat op de foto van een
-                                    flitser staat
-                                    dat je een telefoon bij het stuur is, maar die telefoon is opgeplakt op je raam om
-                                    te kunnen navigeren. Hierrmee
-                                    kun je in twijfel gaan en dus de fout van de AI corrigeren.
+                                    Contestable AI betekent het gebruik van data-analyse en verwerking, aangepast op
+                                    basis van feedback, om beleid in de publieke sector te ondersteunen, te
+                                    beargumenteren of te automatiseren.
                                 </p>
-                                <h4>Part 2: Designing Contestable AI</h4>
+                                <p>
+                                    Publieke AI-systemen hebben invloed op de autonomie van mensen. Hiervoor zijn twee
+                                    belangrijke voorwaarden:
+                                </p>
+                                <ol>
+                                    <li>Accurate overtuigingen (accurate beliefs)</li>
+                                    <li>De mogelijkheid om naar eigen plannen te handelen (act on your plans)</li>
+                                </ol>
+                                <p>Dit betekent dat er veel onderzoek en testen nodig zijn om betrouwbare systemen te
+                                    ontwikkelen.</p>
+
+                                <p>
+                                    Contestable AI is tegenwoordig een belangrijk onderwerp. Het verwijst naar
+                                    AI-systemen die maatschappelijke, ethische of juridische discussies oproepen. Deze
+                                    systemen krijgen vaak kritiek vanwege vooringenomenheid, gebrek aan transparantie of
+                                    schending van privacy. Ook nemen ze soms beslissingen zonder duidelijke uitleg.
+                                </p>
+                                <img src="img/ContestableAI.jpeg" alt="ContestableAI">
+                            </section>
+                            <section class="onderdeelTwee">
+                                <h2>Onderdeel 2: Ontwerpen van Contestable AI</h2>
+                                <p>
+                                    Het doel is om Contestable AI-systemen te maken die betwistbaar zijn. Dit betekent
+                                    dat menselijke tussenkomst en bezwaar mogelijk zijn. Gebruikers kunnen beslissingen
+                                    van het systeem beter begrijpen en corrigeren wanneer dat nodig is.
+                                </p>
+                                <p>
+                                    Bijvoorbeeld: je krijgt een boete omdat een flitspaal registreert dat je je telefoon
+                                    aan het stuur had. In werkelijkheid zat de telefoon vastgeplakt aan je raam voor
+                                    navigatie. Met een contestable AI-systeem kun je deze fout aanvechten en corrigeren.
+                                </p>
+
+                                <h4>Belangrijke ontwerpprincipes</h4>
                                 <ul>
-                                    <li>Interactive controles, voor meer controle voor de gebruiker (AI weet misschien
-                                        de het hele verhaal)</li>
-                                    <li>Intervention request
+                                    <li>Interactieve controles: Meer controle voor gebruikers, omdat AI niet altijd het
+                                        volledige verhaal kent.</li>
+                                    <li>Verzoek tot interventie:
                                         <ol>
-                                            <li>Human disagrees</li>
-                                            <li>channels for reconsideration</li>
-                                            <li>Human controller reconsiders - obligation 2 respond</li>
-                                            <li>dialectical exchange between controller & victim - arena for debate</li>
+                                            <li>Een mens is het oneens met een AI-beslissing</li>
+                                            <li>Er zijn kanalen om de beslissing te heroverwegen</li>
+                                            <li>Een menselijke controller heroverweegt en moet reageren</li>
+                                            <li>Dialoog tussen controller en gebruiker als arena voor debat</li>
                                         </ol>
                                     </li>
-                                    <li>Monitor & pick-up patterns - alert humans for considerations</li>
+                                    <li>Monitoren en signaleren: Patronen herkennen en mensen waarschuwen voor mogelijke
+                                        heroverweging.</li>
                                 </ul>
-                                <p>Tools for scrutiny (streng toezicht):</p>
+
+                                <h4>Instrumenten voor toezicht</h4>
                                 <ul>
-                                    <li>algoritm register</li>
-                                    <li>Third party becomes aware of the AI system</li>
+                                    <li>Algoritmenregister</li>
+                                    <li>Derde partijen worden geïnformeerd over het AI-systeem</li>
                                 </ul>
-                            </div>
+                            </section>
                         </div>
 
-                        <h4>Mening:</h4>
-                        <p> Ik heb persoonlijk helemaal geen interesse in AI, wat ik eigenlijk moet ik die wel hebben
-                            omdat het wel onze toekomst is. Maar ik vond dit eigenlijk best wel interessant om te horen!
-                            Ik vind het ook echt belangrijk dat het contestable AI door moet worden gevoerd, omdat je
-                            ten eerste ook echt mensen nodig hebt als 'third party' en er zit altijd veel fouten in de
-                            contested AI, want er wordt nooit uitgelegd in hun conclusies. Dit kan nare/negatieve
-                            gevolgen hebben. </p>
+                        <div class="Mening">
+                            <img src="img/contestabilityLoopsAI.jpeg" alt="code voor kassa bon">
+                            <section>
+                                <h4>Mening:</h4>
+                                <p> Ik heb persoonlijk helemaal geen interesse in AI, wat ik eigenlijk moet ik die wel
+                                    hebben
+                                    omdat het wel onze toekomst is. Maar ik vond dit eigenlijk best wel interessant om
+                                    te horen!
+                                    Ik vind het ook echt belangrijk dat het contestable AI door moet worden gevoerd,
+                                    omdat je
+                                    ten eerste ook echt mensen nodig hebt als 'third party' en er zit altijd veel fouten
+                                    in de
+                                    contested AI, want er wordt nooit uitgelegd in hun conclusies. Dit kan
+                                    nare/negatieve
+                                    gevolgen hebben. </p>
+                            </section>
+
+                        </div>
+
+
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog2').showModal()">
-                    <img src="img/Interesses.jpg" alt="favoriete koffie tentje">
+                    <img src="img/Kars_Alfrink.webp" alt="favoriete koffie tentje">
                     <h2>Kars Alfrink</h2>
                 </button>
             </section>
@@ -264,56 +460,92 @@
                         <div><button class="closeDialog">Terug</button>
                             <h3>WEEKLY NERD 3</h3>
                         </div>
-                        <h1>Cassie Evans</h1>
                         <div>
-                            <div>
-                                <h2>GSAP - allows you to animate anything</h2>
-                            </div>
-                            <div>
-                                <img src="img/BeyondTweening.jpeg" alt="gsap presentatie">
-                            </div>
-                        </div>
-                        <div>
-                            <img src="img/BeyondTweeningCOde.jpeg" alt="gsap code">
                             <section>
-                                <h4>basic informatie over de weekly nerd presentatie:</h4>
-                                <p>Gsap is een API waarmee je dus alles kan animeren wat je maar wil. Tijdens de
-                                    presentaitie heeft ze vooral code stukjes laten zien dus ik zet ze wel even hier
-                                    onder:
-                                <ul>
-                                    <li>Gsap.to(".box",{duration:1, x:918})</li>
-                                    <li>Let tl = gsap.timeline(); tl.to(".box"{duration:1, x:918});</li>
-                                    <li>Gsap.utiles.random(-100,100);</li>
-                                    <li>Gsap.utils.random(["red","blue","green"])</li>
-                                    <li>Function name(){ mapWidth = gsap.utils.mapRange(0, innerWidth,-50,50); mapHeight
-                                        = gsap.utils.mapRange(0, innerHeight, -50,50);}</li>
-                                    <li>Gsap.utils.wrap([red,green,blue])</li>
-                                    <li>Gsap.utils.wrapYoyo();</li>
-                                    <li>Gsap.utils.pipe()</li>
-                                    <li>Gsap.utils.snap()</li>
-                                    <li>
-                                        matchMedia();
-                                    </li>
-                                    <li>control methods: <ul>
-                                            <li>play()</li>
-                                            <li>pause()</li>
-                                            <li>resume()</li>
-                                            <li>reverse()</li>
-                                            <li>restart()</li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <h1><a href="https://www.cassie.codes/" target="_blank">Cassie Evans</a></h1>
+                                <p>Cassie Evans is een creatieve ontwikkelaar en educator gespecialiseerd in webanimatie
+                                    en motion design. Ze werkt als Lead Bestower of Animation Superpowers bij GreenSock,
+                                    waar ze ontwikkelaars inspireert en onderwijst in het gebruik van animaties op het
+                                    web. Cassie is een ervaren spreker op internationale conferenties en organiseert
+                                    workshops om diversiteit en inclusiviteit in de techwereld te bevorderen. Met haar
+                                    werk richt ze zich op toegankelijke, speelse en functionele gebruikersinterfaces.
                                 </p>
+                            </section>
+                            <img src="img/Cassie_Evans.jpeg" alt="Cassie Evans face">
+                        </div>
+
+                        <!-- <img src="img/BeyondTweeningCOde.jpeg" alt="gsap code"> -->
+                        <p class="onderdeelTwee">
+                            GSAP (GreenSock Animation Platform) is een krachtige JavaScript API waarmee je vrijwel alles
+                            op een website kunt animeren. Tijdens de presentatie heeft Cassie Evans vooral met code
+                            gewerkt om te laten zien hoe veelzijdig GSAP is. Hieronder vind je een overzicht van enkele
+                            veelgebruikte functies en voorbeelden:
+                        </p>
+                        <section class="wrap">
+                            <div>
+                                <h4>Basisanimaties</h4>
+                                <ul>
+                                    <li><code>gsap.to(".box", {duration: 1, x: 918})</code>: Animeren van een element
+                                        met de class <em>box</em> naar een horizontale positie van 918 pixels binnen 1
+                                        seconde.</li>
+                                    <li><code>let tl = gsap.timeline(); tl.to(".box", {duration: 1, x: 918});</code>:
+                                        Een timeline aanmaken waarin je meerdere animaties kunt combineren en achter
+                                        elkaar afspelen.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Utility functies</h4>
+                                <ul>
+                                    <li><code>gsap.utils.random(-100, 100)</code>: Geeft een willekeurig getal tussen
+                                        -100 en 100.</li>
+                                    <li><code>gsap.utils.random(["red", "blue", "green"])</code>: Selecteert willekeurig
+                                        een kleur uit de lijst.</li>
+                                    <li><code>gsap.utils.mapRange(0, innerWidth, -50, 50)</code>: Zet een waarde van het
+                                        ene bereik (bijvoorbeeld 0 tot schermbreedte) om naar een ander bereik
+                                        (bijvoorbeeld -50 tot 50).</li>
+                                    <li><code>gsap.utils.wrap(["red", "green", "blue"])</code>: Zorgt ervoor dat je door
+                                        een array kunt bladeren, en bij het einde weer bij het begin begint.</li>
+                                    <li><code>gsap.utils.wrapYoyo()</code>: Vergelijkbaar met wrap, maar wisselt ook de
+                                        richting (zoals een 'pingpong'-effect).</li>
+                                    <li><code>gsap.utils.pipe()</code> en <code>gsap.utils.snap()</code>: Geavanceerde
+                                        functies om waarden te transformeren of naar dichtstbijzijnde 'snap'-punten te
+                                        brengen.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Media Queries</h4>
+                                <ul>
+                                    <li><code>gsap.matchMedia()</code>: Hiermee kun je animaties aanpassen op basis van
+                                        schermgrootte of andere media queries, vergelijkbaar met CSS media queries maar
+                                        dan voor animaties.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Animatiebesturing</h4>
+                                <ul>
+                                    <li><code>play()</code>: Start of hervat de animatie.</li>
+                                    <li><code>pause()</code>: Pauzeert de animatie.</li>
+                                    <li><code>resume()</code>: Zet de animatie voort na pauze.</li>
+                                    <li><code>reverse()</code>: Draait de animatie om.</li>
+                                    <li><code>restart()</code>: Start de animatie opnieuw vanaf het begin.</li>
+                                </ul>
+                        </section>
+
+                        <aside class="Mening">
+                            <img src="img/BeyondTweeningCOde.jpeg" alt="code voor kassa bon">
+                            <section>
                                 <h4>Mening:</h4>
                                 <p>Deze weekly nerd vond ik de leukste weekly nerd tot nu toe! Er kwamen toffe dingen
                                     voorbij en het was duidelijk uitgelegd. Alleen ben ik inmiddels wel weer bijna alles
                                     vergeten , dus ik zal zelf nog even op de website moeten duiken om te checken wat er
                                     allemaal kan.</p>
                             </section>
+
+                        </aside>
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog3').showModal()">
-                    <img src="img/RMIT.jpg" alt="university RMIT vietnam">
+                    <img src="img/Cassie_Evans.jpeg" alt="university RMIT vietnam">
                     <h2>Cassie Evans</h2>
                 </button>
             </section>
@@ -323,94 +555,174 @@
                         <div><button class="closeDialog">Terug</button>
                             <h3>WEEKLY NERD 4</h3>
                         </div>
-                        <h1>Jeremy Keith</h1>
                         <div>
-                            <div>
-                                <h2>Declarative Design</h2>
-                                <p>*geen eigen fotos gemaakt tijdens deze presentatie</p>
-                            </div>
-                            <div>
-                                <img src="img/DeclarativeDesign.jpg" alt="jeremy keith">
-                            </div>
-                        </div>
-                        <div>
-
                             <section>
-                                <h4>basic informatie over de weekly nerd presentatie:</h4>
-                                <p>imperative programming</p>
-                                <ol>
-                                    <li>Create an array of items</li>
-                                    <li>Loop through each item</li>
-                                </ol>
-                                <p>How to behave like a button - with javascript - imparative</p>
-                                <ul>
-                                    <li>Imperative > javascript > div acts like a button</li>
-                                    <li>Declarative > html > button element</li>
-                                </ul>
-                                <p>
-                                    jeremy Keith said "javascript should only do what javascript can do"
-                                </p>
-                                <p>if you invent from scratch you have total control. </p>
-                                <p>met padding-inline-start is het padding-left, maar als je computer is ingesteld in
-                                    als je vanaf rechts naar links leest word het omgedraaid! - inclusief. </p>
-                                <p>voor makkelijk responsive font size: font-size:calc(0.5rem + .666vw); of
-                                    Font-size:clamp(1rem,0.5rem +.666vw, 1.5rem);</p>
-                                <p><a href="https://utopia.fyi/">Utopia.Fyi</a> is een gemakkelijke website waar je goed
-                                    responsive design tips krijgt met @min en @max scaling het groeit nu heel soepel in
-                                    elkaar van mobiel naar groter scherm!!</p>
-                                <p>Functies in css die handig kunnen zijn:
-                                <ul>
-                                    <li>Calc()</li>
-                                    <li>clamp()</li>
-                                    <li>min and max()</li>
-                                    <li>fit-content()</li>
-                                    <li>Min- max-content()</li>
-                                    <li>repeat()</li>
-                                    <li>minmax()</li>
-                                </ul>
+                                <h1><a href="https://adactio.com/" target="_blank">Jeremy Keith</a></h1>
+                                <p>Jeremy Keith is een webontwikkelaar, auteur, spreker en muzikant uit Brighton,
+                                    Engeland. Hij is mede-oprichter van het ontwerp- en ontwikkelbureau Clearleft,
+                                    opgericht in 2005. Daarnaast is hij bekend van zijn boeken, zoals HTML5 for Web
+                                    Designers, en zijn blog op Adactio.com, waar hij regelmatig schrijft over
+                                    webstandaarden, technologie en cultuur. Jeremy speelt ook traditionele Ierse muziek
+                                    op de mandoline en bouzouki in de indieband Salter Cane. Hij is actief in de
+                                    gemeenschap als coach bij Codebar Brighton en organisator van de Homebrew Website
+                                    Club in Brighton.
                                 </p>
                             </section>
+                            <img src="img/Jeremy_keith.jpeg" alt="jeremy keith face">
                         </div>
-                        <div class="meerInfo">
-                            <img src="img/Imperativevs.jpg" alt="gsap code">
-                            <div>
 
-                                <h4>Is declarative beter dan imperative?</h4>
-                                <p>Wat is het verschil tussen Declarative en imperative?:</p>
-                                <p>Imperative is eigenlijk stap voor stap uitleggen wat je wil zien. Je focust op de
-                                    manier waarop iets gebeurt. Declarative is wat je wil bereiken en het systeem
-                                    bepaalt hoe
-                                    het gedaan wordt. Je focust op het doel of de uitkomst. verschil:
+
+                        <div>
+                            <section style="width: 40%;">
+                                <h4>Imperative Programming</h4>
+                                <p>Imperative programming werkt door het stapsgewijs geven van instructies, zoals in
+                                    JavaScript:</p>
                                 <ul>
-                                    <li>Imperative is hoe je het wil bereiken en Declarative is wat je wil bereiken.
+                                    <li>Maak een Array van items;<br>
+                                        <code>const items = ['amsterdam', 'rotterdam', 'utrecht'];</code>
                                     </li>
-                                    <li>Imperative beheer je alle stappen en bij declarative beheert het syteem je
-                                        stappen.</li>
-                                    <li>Imperative moet je meer code schrijven omdat het dus stap voor stap wordt
-                                        gedaan.</li>
-                                    <li>Imperative heeft meer kansen om fouten te maken, maar Declarative jusit weer
-                                        Minder controle, soms minder flexibel. </li>
+                                    <li>Loop through each item <br><code>for (let i = 0; i < items.length; i++) {
+                                        console.log(items[i]);
+                                      }</code></li>
                                 </ul>
-                                En wat is beter, Imperative of Declarative? Het hangt van de situatie af.
+                                <p>Voorbeeld: Met JavaScript laat je een div zich gedragen als een button.</p>
+                                <p>Imperative &gt; JavaScript &gt; div acts like a button</p>
+                                <pre><code>&lt;div id="fakeButton" tabindex="0" role="button"&gt;Klik hier&lt;/div&gt;</code></pre>
+
+                                <p>Jeremy Keith zei: <em>"JavaScript should only do what JavaScript can do."</em></p>
+                                <p>Met andere woorden: als iets al op een semantische en toegankelijke manier kan in
+                                    HTML (zoals een <code>&lt;button&gt;</code> gebruiken), dan is dat meestal beter dan
+                                    het helemaal in
+                                    JavaScript nabouwen.</p>
+                                <p>Als je iets helemaal zelf bouwt, heb je totale controle.</p>
+
+                            </section>
+
+                            <section style="width: 60%;">
+                                <h4>Declarative Programming</h4>
+                                <p>Declarative programming richt zich op het beschrijven van wat er moet gebeuren, zoals
+                                    in HTML:</p>
+                                <ul>
+                                    <li>Declarative &gt; HTML &gt; button element</li>
+                                </ul>
+                                <p>CSS tips voor makkelijk responsive design:</p>
+                                <p>Met <code>padding-inline-start</code> wordt de padding links ingesteld, maar als de
+                                    leesrichting van rechts naar links is, draait dit automatisch om — inclusief
+                                    ondersteuning voor verschillende talen.</p>
+                                <p>Voor responsive font sizes kun je bijvoorbeeld gebruiken:</p>
+                                <ul>
+                                    <li><code>font-size: calc(0.5rem + 0.666vw);</code></li>
+                                    <li><code>font-size: clamp(1rem, 0.5rem + 0.666vw, 1.5rem);</code></li>
+                                </ul>
+                                <p>
+                                    <a href="https://utopia.fyi/" target="_blank">Utopia.fyi</a> is een handige tool
+                                    voor het maken van
+                                    schaalbare, responsive designs. Je kunt er typografieschalen, spacing en
+                                    lay-outsystemen genereren die zich
+                                    automatisch aanpassen aan de schermgrootte. Zo beweegt je ontwerp soepel mee van een
+                                    klein mobiel scherm
+                                    tot een groot desktopscherm, zonder harde breekpunten of onnatuurlijke sprongen.
                                 </p>
 
-                            </div>
+                                <p>Utopia maakt gebruik van moderne CSS-functies die je veel flexibiliteit geven:</p>
+
+                                <ul>
+                                    <li><code>calc()</code>: Hiermee kun je waarden combineren, bijvoorbeeld:
+                                        <br><code>font-size: calc(1rem + 0.5vw);</code> past lettergrootte aan op basis
+                                        van viewportbreedte.
+                                    </li>
+                                    <li><code>clamp()</code>: Stelt een minimum-, voorkeurs- en maximumwaarde in.
+                                        Voorbeeld:
+                                        <br><code>font-size: clamp(1rem, 2vw, 2rem);</code> zorgt dat tekst schaalt maar
+                                        nooit te klein of te groot wordt.
+                                    </li>
+                                    <li><code>min()</code> en <code>max()</code>: Geeft respectievelijk de kleinste of
+                                        grootste waarde terug tussen meerdere opties.
+                                        <br>Bijvoorbeeld: <code>width: min(100%, 600px);</code> houdt het element
+                                        maximaal 600px breed.
+                                    </li>
+                                    <li><code>fit-content()</code>: Laat een element zo groot worden als de inhoud
+                                        vereist, tot een maximum.
+                                    </li>
+                                    <li><code>min-content</code> en <code>max-content</code>: Handig bij het bepalen van
+                                        breedtes gebaseerd op inhoud.
+                                    </li>
+                                    <li><code>repeat()</code>: Wordt veel gebruikt in grid layouts, zoals
+                                        <br><code>grid-template-columns: repeat(3, 1fr);</code> voor drie gelijke
+                                        kolommen.
+                                    </li>
+                                    <li><code>minmax()</code>: Combineert minimale en maximale grenzen voor flexibele
+                                        grids.
+                                        <br>Bijvoorbeeld:
+                                        <code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code>
+                                    </li>
+                                </ul>
+
+                                <p>Door deze functies slim te combineren maak je websites die mooi en leesbaar blijven
+                                    op ieder schermformaat, zonder ingewikkelde media queries.</p>
+                            </section>
                         </div>
-                        <h4>Mening:</h4>
-                        <p>Ik denk dat ik op dit moment meer Imperative ben, omdat ik het stap voor stap wil uitleggen
-                            en zo dat ik het dus begrijp. Ik wil wel liever naar de Declarative kant gaan, omdat het wel
-                            gewoon makkelijker is en sneller. </p>
-                        <p>Daarnaast vond ik het ook wel interessant hoe er eigenlijk twee kanten zijn in het schrijven
-                            van code taal, ik heb daar namelijk nooit overnagedacht. Hoewel ik niet bewust ga nadenken
-                            over hoe ik het declarative of imperative moet gaan schrijven, vind ik het wel 'fijn' om het
-                            in mijn achterhoofd te hebben als het toch ooit aan bod komt! </p>
-                        <p>En als ik het over de presentatie mag gaan hebben, vond ik het heel saai, want hij vertelde
-                            het niet heel erg met emoties. ik zag wel dat hij er echt een passie voor had wat ik leuk
-                            vond om te zien. maar ik raak snel afgeleid en dat gebeurde hier ook helaas. </p>
+
+
+                        <div class="onderdeelTwee">
+
+                            <h4>Is declarative beter dan imperative?</h4>
+                            <h5>Wat is het verschil tussen declarative en imperative?</h5>
+                            <p>Bij <em>imperative</em> programming leg je stap voor stap uit hoe je iets wilt laten
+                                gebeuren. Je richt je op het proces en de manier waarop iets uitgevoerd wordt. Bij
+                                <em>declarative</em> programming geef je juist aan wat je wilt bereiken, en laat je
+                                het systeem bepalen hoe dat gedaan wordt. Je focust dus meer op het gewenste
+                                resultaat.
+                            </p>
+                            <p>De belangrijkste verschillen zijn:</p>
+                            <ul>
+                                <li><strong>Imperative:</strong> Je bepaalt <em>hoe</em> je het doel bereikt. <br>
+                                    <strong>Declarative:</strong> Je bepaalt <em>wat</em> je wilt bereiken.
+                                </li>
+                                <li><strong>Imperative:</strong> Je beheert alle stappen zelf. <br>
+                                    <strong>Declarative:</strong> Het systeem beheert de uitvoering van de stappen.
+                                </li>
+                                <li><strong>Imperative:</strong> Je schrijft vaak meer code, omdat je alles stap
+                                    voor stap moet beschrijven.</li>
+                                <li><strong>Imperative:</strong> Er is meer kans op fouten door de complexiteit.
+                                    <br>
+                                    <strong>Declarative:</strong> Minder kans op fouten, maar soms ook minder
+                                    controle en flexibiliteit.
+                                </li>
+                            </ul>
+                            <p>Welke aanpak beter is, hangt sterk af van de situatie en het doel dat je voor ogen
+                                hebt.</p>
+
+
+                        </div>
+
+                        <aside class="Mening">
+                            <img src="img/Imperativevs.jpg" alt="gsap code">
+                            <section>
+                                <h4>Mening:</h4>
+                                <p>Ik denk dat ik op dit moment meer Imperative ben, omdat ik het stap voor stap wil
+                                    uitleggen
+                                    en zo dat ik het dus begrijp. Ik wil wel liever naar de Declarative kant gaan, omdat
+                                    het wel
+                                    gewoon makkelijker is en sneller. </p>
+                                <p>Daarnaast vond ik het ook wel interessant hoe er eigenlijk twee kanten zijn in het
+                                    schrijven
+                                    van code taal, ik heb daar namelijk nooit overnagedacht. Hoewel ik niet bewust ga
+                                    nadenken
+                                    over hoe ik het declarative of imperative moet gaan schrijven, vind ik het wel
+                                    'fijn' om het
+                                    in mijn achterhoofd te hebben als het toch ooit aan bod komt! </p>
+                                <p>En als ik het over de presentatie mag gaan hebben, vond ik het heel saai, want hij
+                                    vertelde
+                                    het niet heel erg met emoties. ik zag wel dat hij er echt een passie voor had wat ik
+                                    leuk
+                                    vond om te zien. maar ik raak snel afgeleid en dat gebeurde hier ook helaas. </p>
+                                <section>
+                        </aside>
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog4').showModal()">
-                    <img src="img/doelen.png" alt="7/11 sign">
+                    <img src="img/Jeremy_keith.jpeg" alt="7/11 sign">
                     <h2>Jeremy Keith</h2>
                 </button>
             </section>
@@ -420,40 +732,88 @@
                         <div><button class="closeDialog">Terug</button>
                             <h3>WEEKLY NERD 5</h3>
                         </div>
-                        <h1>Julia Miocene</h1>
                         <div>
-                            <div>
-                                <h2>CSS only Character Modeling</h2>
-                            </div>
-                            <div>
-                                <img src="img/JuliaMicone.jpg" alt="scrollanimation">
-                            </div>
-                        </div>
-                        <div>
-                            <img src="img/noodleboy.gif" alt="code voor kassa bon">
                             <section>
-                                <h4>basic informatie over de weekly nerd presentatie:</h4>
-                                <p>ze liet tijdens haar presentatie vooral voorbeelden zien van haar werk en heeft ze
-                                    haar code van die animatie laten zien. </p>
-                                <img src="img/block.jpg" alt="css girl running">
-                                <p>Ik kan je wel vertellen dat ik haar super gaaf vind, met wat ze allemaal kan met css.
-                                    Ik heb haar website bekeken <a href="https://miocene.io/" target="_blank">Julia
-                                        Miocene's Website!</a> en er zitten echt super handige tips in!</p>
+                                <h1><a href="https://miocene.io/" target="_blank">Julia Miocene</a></h1>
+                                <p>Julia Miocene is een creatieve front-end developer en designer die zich specialiseert
+                                    in het verkennen van de grenzen van CSS. Ze combineert technische precisie met
+                                    artistieke expressie en maakt indrukwekkende visuele experimenten zonder gebruik van
+                                    afbeeldingen of JavaScript. Haar werk laat zien wat er mogelijk is met puur CSS en
+                                    dient als inspiratie voor webontwikkelaars en ontwerpers wereldwijd.
+                                </p>
                             </section>
+                            <img src="img/julia_miocene.jpeg" alt="Julia Miocene face">
+                        </div>
+                        <div id="CodePen">
+
+                            <iframe height="500" style="width: 100%;" scrolling="no" title="Pure CSS 3D Girl"
+                                src="https://codepen.io/miocene/embed/eYaRgVE??default-tab=result" frameborder="no"
+                                loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                See the Pen <a href="https://codepen.io/miocene/pen/eYaRgVE">
+                                    Pure CSS 3D Girl</a> by Julia Miocene (<a
+                                    href="https://codepen.io/miocene">@miocene</a>)
+                                on <a href="https://codepen.io">CodePen</a>.
+                            </iframe>
+                            <iframe height="500" style="width: 100%;" scrolling="no" title="Sunday CSS #12: CSS Noodle"
+                                src="https://codepen.io/miocene/embed/eYbazKN??default-tab=result" frameborder="no"
+                                loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                See the Pen <a href="https://codepen.io/miocene/pen/eYbazKN">
+                                    Sunday CSS #12: CSS Noodle</a> by Julia Miocene (<a
+                                    href="https://codepen.io/miocene">@miocene</a>)
+                                on <a href="https://codepen.io">CodePen</a>.
+                            </iframe>
+                            <iframe height="500" style="width: 100%;" scrolling="no" title="Sunday CSS #8: Mosquito"
+                                src="https://codepen.io/miocene/embed/zYMVVPW??default-tab=result" frameborder="no"
+                                loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                See the Pen <a href="https://codepen.io/miocene/pen/zYMVVPW">
+                                    Sunday CSS #8: Mosquito</a> by Julia Miocene (<a
+                                    href="https://codepen.io/miocene">@miocene</a>)
+                                on <a href="https://codepen.io">CodePen</a>.
+                            </iframe>
 
                         </div>
-                        <h4>Mening:</h4>
-                        <p> Ik wist niet dat dit een WeeklyNerd was en ik was ook te laat, waardoor ik eerste deel niet
-                            heb meegekregen. Toen ik er wel was heb ik zitten luisteren maar geen aantekeningen en fotos
-                            gemaakt, omdat ik dus niet wist dat zij de weekly nerd was. Het werk wat ze liet zien, was
-                            best cool. Het lijkt me wel veel werk als je bijvoorbeeld die mug wil namaken met elk
-                            onderdeel een andere animatie geven en ook nog smooth. Ik kan haar tips wel toepassen in
-                            mijn projecten denk ik.
-                        </p>
+                        <section class="onderdeelTwee">
+                            <h4>basic informatie over de weekly nerd presentatie:</h4>
+                            <p>Tijdens haar presentatie liet ze vooral voorbeelden zien van haar werk, waarbij ze haar
+                                code voor een indrukwekkende animatie deelde. Wat opvallend is, is dat ze alles met pure
+                                CSS heeft gedaan, zonder gebruik te maken van JavaScript of andere technieken. Ze
+                                gebruikt best wel zware CSS-technieken — zoals complexe keyframe-animaties,
+                                3D-transformaties en misschien ook filters en geavanceerde selectors — die normaal
+                                gesproken niet altijd worden aangeraden vanwege performance en onderhoudbaarheid.
+
+                                Eigenlijk zou je dit soort zware CSS niet zo vaak moeten toepassen in een project, omdat
+                                het de browser kan belasten en de laadtijd kan vertragen. Maar zij kiest er bewust voor
+                                om het toch te doen, juist om te laten zien wat er mogelijk is met CSS alleen.
+
+                                Door zo “out of the box” te denken en deze uitdagende technieken toe te passen, heeft ze
+                                zichzelf gedwongen om echt diep in CSS te duiken. Inmiddels kent ze alle ins en outs van
+                                CSS heel goed. Nu ze die moeilijke en zware technieken onder de knie heeft, kan ze ook
+                                de “makkelijke” dingen heel goed en efficiënt toepassen. Haar kennis van CSS is daardoor
+                                erg breed en ze kan creatief uitpakken met wat CSS kan doen.</p>
+
+                        </section>
+                        <div class="Mening">
+                            <img src="img/JuliaMicone.jpg" alt="">
+                            <section>
+                                <h4>Mening:</h4>
+                                <p> Ik had niet door dat dit een WeeklyNerd-presentatie was en ik was bovendien te laat,
+                                    waardoor ik het eerste deel heb gemist. Toen ik er eenmaal was, heb ik goed
+                                    geluisterd, maar
+                                    geen aantekeningen gemaakt of foto's genomen, omdat ik niet wist dat zij de
+                                    WeeklyNerd was.
+                                    Het werk dat ze liet zien vond ik erg indrukwekkend. Vooral het namaken van
+                                    bijvoorbeeld die
+                                    mug, waarbij elk onderdeel een aparte, vloeiende animatie krijgt, lijkt me
+                                    ontzettend veel
+                                    werk. Ik denk dat ik haar tips zeker kan gebruiken in mijn eigen projecten.
+                                </p>
+
+                            </section>
+                        </div>
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog5').showModal()">
-                    <img src="img/activiteit.jpg" alt="7/11 sign">
+                    <img src="img/julia_miocene.jpeg" alt="7/11 sign">
                     <h2>Julia Miocene</h2>
                 </button>
             </section>
@@ -463,35 +823,50 @@
                         <div><button class="closeDialog">Terug</button>
                             <h3>WEEKLY NERD 6</h3>
                         </div>
-                        <h1>Rosa</h1>
                         <div>
-                            <div>
-                                <h2>HACKERS UNITED</h2>
-                            </div>
-                            <div>
-                                <img src="img/hackers.jpeg" alt="hackerscollege">
-                            </div>
+                            <section>
+                                <h1><a href="https://everythingweb.org/getinspired/" target="_blank">Rosa Schuurmans</a>
+                                </h1>
+                                <p>Julia Miocene is een creatieve front-end developer en designer die zich specialiseert
+                                    in het verkennen van de grenzen van CSS. Ze combineert technische precisie met
+                                    artistieke expressie en maakt indrukwekkende visuele experimenten zonder gebruik van
+                                    afbeeldingen of JavaScript. Haar werk laat zien wat er mogelijk is met puur CSS en
+                                    dient als inspiratie voor webontwikkelaars en ontwerpers wereldwijd.
+                                </p>
+                            </section>
+                            <img src="img/rosa_schuurman.webp" alt="Rosa Schuurman face">
                         </div>
                         <div>
-                            <img src="img/Afgeleid.jpeg" alt="code voor kassa bon">
                             <section>
                                 <h4>basic informatie over de weekly nerd presentatie:</h4>
-                                <p>A hacker is a person skilled in information technology.</p>
+                                <p>Een hacker is iemand die vaardig is in informatietechnologie en vaak creatieve en
+                                    efficiënte oplossingen zoekt voor technische problemen.</p>
                                 <ul>
-                                    <li>KISS Keep It Simple Stupid</li>
-                                    <li> Learn By Trying</li>
-                                    <li> Bash kan een uitdaging zijn</li>
-                                    <li>YAGNI You Arent Gonna Need It</li>
-                                    <li>DRY Don't Repeat Yourself</li>
+                                    <li><strong>KISS (Keep It Simple, Stupid):</strong> Houd je code en oplossingen zo
+                                        eenvoudig mogelijk. Complexiteit maakt systemen moeilijker te begrijpen,
+                                        onderhouden en debuggen.</li>
+                                    <li><strong>Learn By Trying:</strong> De beste manier om te leren is door dingen
+                                        zelf uit te proberen. Experimenteren en fouten maken horen bij het leerproces
+                                        van elke hacker.</li>
+                                    <li><strong>Bash kan een uitdaging zijn:</strong> Werken met de command line en
+                                        shell scripting vereist oefening en geduld, maar het is een krachtig hulpmiddel
+                                        voor automatisering en probleemoplossing.</li>
+                                    <li><strong>YAGNI (You Aren't Gonna Need It):</strong> Bouw alleen wat je echt nodig
+                                        hebt, en voorkom onnodige functionaliteiten die je project ingewikkelder maken
+                                        zonder direct voordeel.</li>
+                                    <li><strong>DRY (Don't Repeat Yourself):</strong> Vermijd duplicatie van code of
+                                        logica. Dit maakt je codebase overzichtelijker, gemakkelijker te onderhouden en
+                                        minder foutgevoelig.</li>
                                 </ul>
                                 <h4>Mening:</h4>
-                                <p> Ik heb niks mee gekregen van deze weekly nerd, omdat ze eerst begon over allerlei
-                                    vage voorbeelden waardoor ik het niet meer begreep.</p>
-                                <p>Toen wilde ze een demonstratie doen met een apparaat, waar een heel vervelend geluid
-                                    uit kwam en ik vond dat echt geen prettig geluid. Hierdoor ben ik mijn concentratie
-                                    kwijt geraakt en was ik vooral geirriteerd.
-                                    Ik heb hiervan niks opgestoken.
-                                </p>
+                                <p>Helaas heb ik weinig kunnen meenemen uit deze WeeklyNerd-presentatie, omdat het begin
+                                    met verschillende voorbeelden voor mij niet helemaal duidelijk was, waardoor ik de
+                                    draad
+                                    kwijt raakte.</p>
+                                <p>Daarnaast wilde ze een demonstratie geven met een apparaat dat geen prettig geluid
+                                    maakte. Dit geluid vond ik storend, waardoor mijn concentratie kwijt raakte en ik
+                                    me vooral geïrriteerd voelde. Daarom heb ik deze presentatie weinig nieuwe inzichten
+                                    opgeleverd gekregen.</p>
                             </section>
 
                         </div>
@@ -499,8 +874,8 @@
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog6').showModal()">
-                    <img src="img/Camera2RMIT.JPG" alt="7/11 sign">
-                    <h2>Rosa </h2>
+                    <img src="img/rosa_schuurman.webp" alt="7/11 sign">
+                    <h2>Rosa Schuurman</h2>
                 </button>
             </section>
             <section>
@@ -510,34 +885,77 @@
                             <button class="closeDialog">Terug</button>
                             <h3>WEEKLY NERD 7</h3>
                         </div>
-                        <h1>Niels Leenheer</h1>
                         <div>
-                            <div>
-                                <h2>Wat is Project Fugu?</h2>
-                                <p>Een initiatief van Google dat webtechnologie uitbreidt met krachtige API’s, zodat
-                                    webapps toegang krijgen tot hardware zoals printers, scanners en pinapparaten.</p>
-                            </div>
-                            <div>
-                                <img src="img/Kassamachines.jpeg" alt="van Horrorcollege">
-                            </div>
-                        </div>
-                        <div>
-                            <img src="img/kassabonCode.jpeg" alt="code voor kassa bon">
                             <section>
-                                <h4>basic informatie over de weekly nerd presentatie:</h4>
-                                <p>Project Fugu is gemaakt van verschillende API, omdat het nog niet op de markt is.</p>
-                                <p>normaal gesproken moet je bij de bon een USB gebruiken, maar je kan het ook met Web
-                                    APIs doen. Dan moet je wel de taal kennen.</p>
-                                <p></p>
-                                <h4>Mening:</h4>
-                                <p>
+                                <h1><a href="https://nielsleenheer.com/" target="_blank">Niels Leenheer</a>
+                                </h1>
+                                <p>Niels Leenheer is een Nederlandse webtechnologie-expert met een passie voor open
+                                    standaarden en browserinnovatie. Hij is bekend van projecten zoals HTML5test.com en
+                                    WhichBrowser, en spreekt regelmatig op internationale conferenties zoals FOSDEM en
+                                    HalfStack. Daarnaast is hij actief als Mozilla TechSpeaker en Google Developer
+                                    Expert voor het web. Momenteel is hij CTO bij Salonhub, waar hij webapplicaties
+                                    ontwikkelt voor de kappersbranche. Niels is ook betrokken bij de organisatie van de
+                                    Fronteers-conferentie.
                                 </p>
                             </section>
+                            <img src="img/Niels_leenheer.jpeg" alt="Niels Leenheer face">
                         </div>
+                        <div class="wrap">
+                            <div class="onderdeelTwee">
+                                <h2>Wat is Project Fugu?</h2>
+                                <p>Project Fugu is een initiatief van Google dat webtechnologie uitbreidt met krachtige
+                                    API's, waardoor webapplicaties rechtstreeks toegang krijgen tot hardware zoals
+                                    printers,
+                                    scanners en pinapparaten. Dit maakt het mogelijk om geavanceerde kassasystemen
+                                    volledig
+                                    in de browser te bouwen.</p>
+                            </div>
+                            <div>
+                                <h2>Kassasystemen met webtechnologie</h2>
+                                <p>Niels Leenheer ontwikkelt zulke kassasystemen, bijvoorbeeld voor kapperszaken, die
+                                    gebruikmaken van Electron voor desktop-apps en Progressive Web Apps die ook op
+                                    Android-tablets werken. Met Project Fugu API's kunnen deze systemen communiceren met
+                                    verschillende apparaten zoals bonprinters, barcode scanners, klantendisplays en
+                                    mobiele
+                                    pinapparaten.</p>
+                            </div>
+                            <div>
+                                <h2>Communicatie met bonprinters</h2>
+                                <p>Bonprinters worden vaak via USB verbonden en communiceren via ASCII-commando's, een
+                                    verouderde standaard die inmiddels langzaam wordt vervangen door Unicode. Omdat elke
+                                    printer een eigen 'taal' spreekt, is maatwerk nodig om ze aan te sturen. Moderne web
+                                    API's zoals WebSerial en WebBluetooth bieden een betrouwbaardere en eenvoudiger
+                                    manier
+                                    om deze communicatie te regelen.</p>
+                            </div>
+                            <div>
+                                <h2>Klantschermen en barcode scanners</h2>
+                                <p>Klantschermen werken meestal met het oudere ESC/POS-protocol, maar kunnen via
+                                    WebSerial
+                                    ook modern worden aangestuurd. Barcode scanners gedragen zich als toetsenborden en
+                                    sturen de gescande codes plus een enter-toets door; deze worden uitgelezen met
+                                    behulp
+                                    van WebHID of via webcam-modules die barcodes en QR-codes herkennen via een canvas
+                                    en
+                                    web workers.</p>
+                            </div>
+                            <div>
+                                <h2>Open source en de toekomst van kassasystemen</h2>
+                                <p>Dankzij het open source werk van Niels hoeven ontwikkelaars het wiel niet opnieuw uit
+                                    te
+                                    vinden en kunnen ze gemakkelijk moderne, op webtechnologie gebaseerde kassasystemen
+                                    bouwen die soepel samenwerken met randapparatuur. Dit opent nieuwe mogelijkheden
+                                    voor
+                                    flexibele, browsergebaseerde kassasystemen in verschillende branches.</p>
+                            </div>
+                        </div>
+
+
                     </form>
+
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog7').showModal()">
-                    <img src="img/CameraRMIT.JPG" alt="7/11 sign">
+                    <img src="img/Niels_leenheer.jpeg" alt="7/11 sign">
                     <h2>Niels Leenheer</h2>
                 </button>
             </section>
@@ -547,56 +965,106 @@
                         <div><button class="closeDialog">Terug</button>
                             <h3>WEEKLY NERD 8</h3>
                         </div>
-                        <h1>Erik Kroes</h1>
                         <div>
-                            <div>
-                                <h2>WCAG - Web Content Accesibility Guidelines</h2>
-                            </div>
-                            <div>
-                                <img src="img/accesibilityMeme.jpeg" alt="scrollanimation">
-                            </div>
-                        </div>
-                        <div>
-                            <img src="img/accesibility.jpeg" alt="code voor kassa bon">
                             <section>
-                                <h4>basic informatie over de weekly nerd presentatie:</h4>
-                                <p>Keyboard is better for everyone! test it on your own computer with tab and shift tab.
-                                </p>
-                                <p>meest algemene problemen voor screenreaders:
-                                <ul>
-                                    <li>geen skip link (bijvoorbeeld de navigatie)</li>
-                                    <li>Uncontrolled focus state</li>
-                                    <li> de div die gebruikt word als button ipv de button element.</li>
-                                </ul>
-                                </p>
-                                <p>Contrast is heel belangrijk! -wat als het zonnig is?</p>
-                                <h5>hoe test je de contrast?
-                                </h5>
-                                <p>contrast ratio van TEN MINSTE 3:1 voor grote teksten en kleine teksten 4.5:1 - en dat
-                                    is het minimum. </p>
-                                <h5>meest voorkomende problemen:</h5>
-                                <ul>
-                                    <li>placeholder - zet het boven het input veld</li>
-                                    <li>branding colors</li>
-                                    <li>states</li>
-                                </ul>
-                                <h5>hoe test je voor alternatives?
-                                </h5>
-                                <ul>
-                                    <li>captions onder videos</li>
-                                    <li>transcript voor podcasts</li>
-                                    <li>alt text voor img - met echte waardevolle tekst over de img zelf als het inhoud
-                                        bevat</li>
-                                </ul>
+                                <h1><a href="https://miocene.io/" target="_blank">Erik Kroes</a></h1>
+                                <p>Erik Kroes is een consultant uit Nederland, gespecialiseerd in toegankelijkheid,
+                                    inclusief design en design systems. Hij heeft ruime ervaring als
+                                    toegankelijkheidsspecialist en product owner, onder andere bij ING, IKEA en Nomensa.
+                                    Erik combineert zijn expertise graag om samen met klanten passende oplossingen te
+                                    creëren. Naast zijn werk besteedt hij tijd aan zijn familie en persoonlijke
+                                    projecten zoals fotografie, tuinieren en creatieve programmering. Wil je samenwerken
+                                    of meer weten? Hij staat open voor nieuwe uitdagingen en contacten.
 
-                                <h5>meest voorkomende problemen:</h5>
-                                <ul>
-                                    <li>img in buttons</li>
-                                    <li>video content zonder closed captions</li>
-                                </ul>
+
+                                </p>
                             </section>
-
+                            <img src="img/erik_kroes.webp" alt="Erik Kroes logo">
                         </div>
+                        <div>
+                            <section class="onderdeelTwee">
+                                <h2>Keyboard is beter voor iedereen!</h2>
+                                <p>
+                                    Probeer het zelf eens op je computer: gebruik de Tab-toets om door de pagina te
+                                    navigeren en Shift + Tab om terug te gaan. Dit maakt websites toegankelijker voor
+                                    iedereen, niet alleen voor mensen die een schermlezer gebruiken.</p>
+                            </section>
+                        </div>
+
+                        <ul class="wrap">
+                            <li>
+                                <h4>Geen skip link</h4>
+                                <p>Veel websites missen een “skip link” waarmee gebruikers direct naar de
+                                    hoofdinhoud kunnen springen, bijvoorbeeld om de navigatie over te slaan. Dit
+                                    zorgt voor frustratie en onnodig veel navigeren.</p>
+                            </li>
+                            <li>
+                                <h4>Ongecontroleerde focusstatus</h4>
+                                <p>De focus moet altijd duidelijk zichtbaar zijn, zodat gebruikers precies weten
+                                    waar ze zich op de pagina bevinden. Ongecontroleerde of ontbrekende focus leidt
+                                    tot verwarring.</p>
+                            </li>
+                            <li>
+                                <h4>Onjuist gebruik van elementen</h4>
+                                <p>Soms worden <code>&lt;div&gt;</code>-elementen gebruikt als knoppen in plaats van
+                                    het juiste <code>&lt;button&gt;</code>-element. Dit zorgt ervoor dat
+                                    schermlezers en toetsenbordgebruikers deze elementen niet goed kunnen bedienen.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Contrast</h4>
+                                <p>Een goed contrast tussen tekst en achtergrond is cruciaal, vooral bij fel licht of
+                                    buitengebruik. Het zorgt ervoor dat iedereen, ook mensen met verminderd zicht, de
+                                    inhoud goed kan lezen.</p>
+                            </li>
+                        </ul>
+
+                        <section class="onderdeelTwee">
+                            <h2>Hoe test je contrast?</h2>
+                            <p>De contrastverhouding moet minimaal <code>3:1</code> zijn voor grote teksten en
+                                <code>4.5:1</code> voor kleine teksten. Dit is het absolute minimum om voldoende
+                                leesbaarheid te garanderen.
+                            </p>
+                        </section>
+                        <section>
+                            <h2>Andere veelvoorkomende problemen en tips voor alternatieven</h2>
+                            <ul class="wrap">
+                                <li>
+                                    <h4>Plaatsing van placeholdertekst</h4>
+                                    <p>Gebruik de placeholder niet als enige label; zet altijd een label boven het
+                                        invoerveld. Zo begrijpen gebruikers wat ze moeten invullen, ook als de
+                                        placeholder verdwijnt tijdens het typen.</p>
+                                </li>
+                                <li>
+                                    <h4>Brandingkleuren en statusindicatoren</h4>
+                                    <p>Zorg dat kleuren niet de enige manier zijn om informatie of status over te
+                                        brengen. Voeg bijvoorbeeld iconen of tekst toe, zodat iedereen het begrijpt.</p>
+                                </li>
+                                <li>
+                                    <h4>Alternatieven voor media</h4>
+                                    <ul>
+                                        <li>Voeg <strong>ondertiteling</strong> toe aan video's, zodat slechthorenden
+                                            mee kunnen kijken.
+
+                                        </li>
+                                        <li>Bied <strong>transcripten</strong> aan voor podcasts en audiofragmenten,
+                                            zodat de inhoud ook gelezen kan worden.
+
+                                        </li>
+                                        <li>
+                                            Voeg <strong>alt-teksten</strong> toe aan afbeeldingen met een beschrijving
+                                            die de inhoud en functie van de afbeelding duidelijk maakt.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h2>Veelvoorkomende valkuilen bij media en interactie</h2>
+                            <ul class="rood">
+                                <li>Afbeeldingen die in knoppen gebruikt worden, missen vaak een goede alt-tekst,
+                                    waardoor schermlezers niet weten wat de knop doet.</li>
+                                <li>Video’s zonder closed captions sluiten een grote groep gebruikers uit.</li>
+                            </ul>
+                        </section>
                         <h4>Mening:</h4>
                         <p>Ik vind zelf dat CMD altijd heel erg richt op de accesibility van het bouwen van websites.
                             Ook vind ik dit super goed wat ze doen, omdat het wel belangrijk is. Alleen om het altijd
@@ -612,7 +1080,7 @@
                     </form>
                 </dialog>
                 <button class="button" onclick="document.getElementById('myDialog8').showModal()">
-                    <img src="img/ChristmasRMIT.PNG" alt="7/11 sign">
+                    <img src="img/erik_kroes.webp" alt="Erik Kroes logo">
                     <h2>Erik Kroes</h2>
                 </button>
             </section>

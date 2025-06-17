@@ -22,12 +22,18 @@
 
 :root {
     --grey: rgb(167 167 167);
-    --light-grey: rgb(222, 222, 222);
+    --light-grey:rgb(230, 236, 253);
     --white: white;
     --black: rgb(34 33 36);
-    --funky: rgb(77 129 188);
+    --funky:  rgb(10, 29, 110);
+    --funky-light:rgba(10, 28, 110, 0.227);
 
+    --border:rgba(167, 203, 203, 0.335);
+   
+    --rood:rgb(159, 25, 25);
 }
+
+
 
 * {
     box-sizing: border-box;
@@ -44,7 +50,7 @@ body {
     align-items: center;
     position: relative;
     flex-direction: column;
-    color: var(--black);
+    
 }
 
 body::before {
@@ -60,6 +66,22 @@ body::before {
     z-index: -1;
 }
 
+
+code{
+    background-color:var(--funky);
+    color: var(--white);
+    padding: .2em;
+    border-radius: .4em;
+    hyphens: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+em{
+    font-weight: 500;
+}
+strong{
+    color: var(--funky);
+}
+
 /* -----------------header----------------------- */
 
 header {
@@ -67,46 +89,38 @@ header {
     position: absolute;
     top: 1em;
     right: 1em;
-}
+     ul {
+        display: flex;
+        gap: 1em;
+        width: 100%;
+        padding: 0;
 
-header ul {
-    display: flex;
-    gap: 1em;
-    width: 100%;
-    padding: 0;
-}
+        li {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            > a {
+                font-size: 1em;
+                text-decoration: none;
+                color: var(--black);
+                place-items: center;
+            }
+            button {
+                font-size: 1em;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+            }
+            > img {
+                object-fit: contain;
+                width: 1em;
+                height: 1em;
+                
+                place-self: center;
+            }
+        }
 
-header li {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-}
-
-header li a {
-    font-size: 1em;
-    text-decoration: none;
-    color: var(--black);
-    place-items: center;
-}
-
-
-header ul li:nth-of-type(1) a:visited {
-    color: var(--black);
-}
-
-header li button {
-    font-size: 1em;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-header  li > img {
-    object-fit: contain;
-    width: 1em;
-    height: 1em;
-    
-    place-self: center;
+    }
 }
 
 header li:not(:has(img)) {
@@ -126,61 +140,94 @@ header li:nth-of-type(4) img {
 .img img{
     width: 32%;
     height: 20em;
-    border: .1em solid rgba(167, 203, 203, 0.335);
+    border: .1em solid var(--border);
 }
 
 .leerdoelen > div{ 
-    display: flex;
+    display: grid;
+    grid-row: span 2;
+    grid-column: span 3;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: subgrid;
+    color: var(--funky);
+    row-gap: 1em;
+    column-gap: 2em;
+    a{
+        text-decoration: none;
+        color:var(--funky) ;
+    }
+    a:hover{
+        color:var(--white) ;
+        transition:color .3s ease-in;
+    }
+    
+    h5{
+        grid-row: 1;
+        color: var(--funky);
+        font-size: 1.3em;
+        background-color: var(--funky-light);
+        width: 100%;
+        padding: .2em 1em;
+        border-radius: .5em;
+        font-size: 1.4em;
+        text-align: center;
+    }
+    p{
+        grid-row: 2;
+    }
 }
 
-.leerdoelen >div div{
-    padding: 1.5em ;
-    background-color: rgba(167, 203, 203, 0.335);
-    border-left: .5em solid rgb(167, 203, 203);
-    border-bottom:.5em solid rgb(131, 175, 175);
-    margin: 1em;
-    border-radius: 1em;
-    width: 40%;
+.progress{
+    margin-top: 6em;
+
+    >div{
+        display: flex;
+        gap: 2em;
+        flex-wrap: wrap;
+        
+        div{
+            width: 30%;
+            ;
+        }
+    }
+    h2{
+        font-size: 1.7em;
+
+    }
+
+    h5{
+        color: var(--funky);
+        font-size: 1.3em;
+        background-color: var(--funky-light);
+        width: fit-content;
+        padding: .2em 1em;
+        border-radius: .5em;
+        margin-top: 1.5em;
+        position: relative;
+        
+    }
+    h5::before{
+        content: "";
+        position: absolute;
+        top: -1em;
+        left: 0;
+        right: 0;
+        width: 93vw;
+        height: .2em;
+        background-color: var(--funky-light);
+    }
+
+    img{
+        width: 100%;
+        margin: .5em 0;
+    }
 }
-.leerdoelen h5{
-    color: rgb(167, 203, 203);
-    font-size: 1.4em;
-    padding-bottom: 1em ;
-}
+
+
+
+
 
 /* -------------foto dialog------------------- */
-#Fotos {
-    border: none;
-    border-radius: 2em;
-    margin: auto;
-    width: 98%;
-    max-width: 100vw;
-    height: 98%;
-    max-height: 100vh;
-    overflow: auto;
-    padding: 2em;
-}
-
-.dialog1 > div:nth-of-type(1) {
-    display: flex;
-    flex-direction: row;
-    grid-row: 1;
-    grid-column: 1;
-    column-gap: 1em;
-    align-self: center;
-}
-
-.dialog1 > div:nth-of-type(1) h3 {
-    height: fit-content;
-    align-self: center;
-    font-weight: 300;
-    font-style: italic;
-    font-size: 1.4em;
-    color: var(--grey);
-    font-size: 1em;
-}
-
-
 
 #photoContainer {
     margin-top: 2em;
@@ -188,38 +235,36 @@ header li:nth-of-type(4) img {
     flex-wrap: wrap;
     gap: 1em;
     align-items: stretch;
+    div {
+        flex-grow: 1;
+        flex-basis: 12em; /* basisgrootte voor portrait */
+        min-width: 12em;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: .5em;
+        display: block;
+      }
   }
   
-  #photoContainer div {
-    flex-grow: 1;
-    flex-basis: 12em; /* basisgrootte voor portrait */
-    min-width: 12em;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-  
+
   #photoContainer div.landscape {
     flex-basis: 30em; /* breder bij landscape */
   }
   
-  #photoContainer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: .5em;
-    display: block;
-  }
   
   
 /* ------------------main----------------- */
-h1 {
+main> h1 {
     font-family: Poppins;
     z-index: 1;
     position: absolute;
 
     top: 2em;
-
-
     font-size: 5em;
 }
 
@@ -228,8 +273,8 @@ h1 {
     position: absolute;
     bottom: 2em;
     right: 2em;
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
     width: 9em;
     border-radius: .3em;
     padding: 1em;
@@ -243,29 +288,27 @@ main {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    >form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        position: absolute;
+        margin-top: -5em;
+        width: 40%;
+        input {
+            order: 2;
+            width: 100%;
+            padding: 1em;
+            border: none;
+            border-radius: 0 2em 2em 0;
+        }
+        input::placeholder {
+            font-size: 1.1em;
+        }
+    }
 }
 
-main>form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    position: absolute;
-    margin-top: -5em;
-    width: 40%;
-}
-
-main>form input {
-    order: 2;
-    width: 100%;
-    padding: 1em;
-    border: none;
-    border-radius: 0 2em 2em 0;
-}
-
-main>form input::placeholder {
-    font-size: 1.1em;
-}
 
 #searchButton {
     order: 1;
@@ -288,17 +331,19 @@ main>div {
     display: flex;
     justify-content: center;
     align-items: start;
+    flex-direction: row;
     margin-top: 4em;
     gap: 2em;
+    flex-wrap: wrap;
 }
 
 /* -------------------buttons onder zoekbalk----------------------- */
 .button {
     display: flex;
     flex-direction: column;
-    /* Aligns child elements (image and h2) in a column */
+    
     justify-content: start;
-    /* Vertically center the content inside the section */
+   
     align-items: center;
     width: 6em;
     height: 6em;
@@ -307,43 +352,55 @@ main>div {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--grey);
+        width: 4em;
+        height: 6em;
+        border-radius: 50%;
+        width: 4em;
+        height: 4em;
+        padding: .3em;
+        background-color: var(--grey);
+        object-fit: cover;
+    
+    }
+    h2 {
+        font-size: 1em;
+        text-align: center;
+        margin-top: -0.5em;
+        color: var(--black);
+    }
 }
 
-.button img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--grey);
-    width: 4em;
-    height: 6em;
-    border-radius: 50%;
-    width: 4em;
-    height: 4em;
-    padding: .3em;
-    background-color: var(--grey);
-    object-fit: cover;
-
-}
-
-.button h2 {
-    font-size: 1em;
-    text-align: center;
-    margin-top: -0.5em;
-    color: var(--black);
-}
 
 /* ---------------------------dialog------------------------- */
 form{
-    margin: 1.5em;
+    margin:4em;
+    h2{
+        font-size: 1.5em;
+        margin:2em 0 0 0; 
+    }
+    h4{
+        font-size: 1.5em;
+        margin:.5em 0;
+    }
+    h5{
+        font-size: 1.1em;
+       margin-bottom: .5em;
+    }
 }
-form h4{
-    font-size: 1.5em;
-    margin: 1em 0 .5em 0;
-}
+
 
 ul{
     list-style-type: square;
+    li{
+        padding: .5em 0;
+    }
 }
+
 form >div:nth-child(1){
     display: flex;
     gap: 1em;
@@ -351,89 +408,207 @@ form >div:nth-child(1){
 form >div:nth-of-type(2){
     display: flex;
     gap: 3em;
-    align-items: center;
+    flex-direction: row;
+    padding: 2em;
+    section{
+        width: 70%;
+    }
+    h1{
+        font-size:3em;
+    }
+    a{
+        color: var(--black);
+        text-decoration: none;
+        margin:1em 0;
+        padding: 0;
+        
+    }
+    img{
+        width: 30%;
+        object-fit: contain;
+     }
+    
+    a:hover{
+        color: var(--funky);
+        background-color:var(--light-grey);
+        padding: 0 .5em;
+        transition: color 0.4s ease-out,padding 0.6s ease-out;
+        border-radius: 2em;
+    }
+    a::after {
+        content: "";
+    
+    }
+    a:hover::after {
+        content: "☞";
+        color: var(--funky);
+        margin: 0;
+        padding: 0;
+        margin-left:.2em ;
+        transform-origin: center;
+    }
+
+}
+
+
+form>article{
+    display: flex;
+    margin-top: 4em;
+    display: flex;
+    gap:2em;
+    
+    section{
+        width: 50%;
+    }
+}
+
+form>section:nth-of-type(1){
+    margin-top: 2em;
+    h2{
+        font-size:1.5em;
+    }
+    p{
+        margin-top:.5em ;
+    }
+}
+
+.Mening{
+    margin-top: 4em;
+    display: flex;
+    gap:2em;
+    section{
+        width: 60%;
+    }
+    img{
+        width: 40%;
+        object-fit: contain;
+    }
+}
+
+form >div:nth-of-type(3){
+    display: flex;
+    gap:4em;
+    padding: 1em;
+    margin-bottom: 2em;
+    img{
+        width: 100%;
+    }
+     a{
+        color: var(--funky);
+        font-weight: bold;
+    }
+}
+
+
+.onderdeelTwee{
+    background-color: var(--light-grey);
+    color: var(--funky);
+    border-radius: 1em;
+    padding: 1em;
+}
+.wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   column-gap: 2em;
+   div{
+    width: 45%;
+    }
+    li{ 
+    padding: 0;
+    margin:1em 0;
+    >ul{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    }
+}
+
+.wrap:has(li>ul) >li:nth-of-type(3){
     width: 100%;
 }
-form >div:nth-of-type(2) div{
-    width: 50%;
+
+form>section:nth-of-type(2):has(.wrap) h2{
+    margin-top: 2em;
 }
 
-form >div:nth-of-type(2) h2{
-    font-style: italic;
-    font-weight: 500;
-    font-size: 2em;
-    color: grey;
-}
-form >div:nth-of-type(2) img{
-    width: 90%;
-    max-height: 70vh;
-    object-fit: contain;
-}
-form >div:nth-of-type(3){
-    margin-top: 4em;
+.rood{
     display: flex;
-    gap:2em;
+    flex-direction: row;
+    flex-wrap: wrap;
+   column-gap: 2em;
+   list-style: none;
+   margin: 0;
+   padding: 0;
 
+   li{
+    width: 45%;
+    padding: .7em;
+    margin: 1em 0;
+    font-weight: 600;
+    background-color: var(--light-grey);
+    color: var(--rood);
+    border-radius: .5em;
+    border-left: .3em solid var(--rood);
+    position: relative;
 }
-.meerInfo{
-    margin-top: 4em;
+li::before{
+    content: "";
+  position: absolute;
+  top: 1em;
+  left: -1.5em;
+  
+  width: 0;
+  height: 0;
+  
+  border-top: 3em solid var(--rood);
+  border-left: .5em solid transparent;
+  border-right: .5em solid transparent;
+  border-top-right-radius: .5em;
+  border-top-left-radius: .5em;
+}
+li::after{
+    content: "";
+    position:absolute;
+    bottom: 1em;
+    left: -1.23em;
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    background-color: var(--rood);
+}
+}
+
+
+#CodePen{
+    width: 100%;
     display: flex;
-    gap:2em;
-}
-.meerInfo img{
-    max-width: 50%;
-    object-fit: contain;
-}
-form >div:nth-of-type(3) h4{
-    font-size:2em ;
+    gap: 1em;
 }
 
-form >div:nth-of-type(3) img{
-    max-height: 80vh;
-    max-width: 55%;
-    object-fit: contain;
-    align-self: center;
-}
-
-#open_dialog1,
-#open_dialog2,
-#open_dialog3,
-#open_dialog4,
-#open_dialog5,
-#open_dialog6,
-#open_dialog7,
-#open_dialog8,
-#open_Hackaton {
-    margin: 0 auto;
-}
-
-#myDialog1,
-#myDialog2,
-#myDialog3,
-#myDialog4,
-#myDialog5 ,
-#myDialog6,
-#myDialog7,
-#myDialog8,
-#myDialogHackaton {
+dialog{
     border: none;
-    border-radius: 2em;
-    margin: auto;
-    width: 98%;
+    margin: 0;
+    width: 100%;
     max-width: 100vw;
-    height: 98%;
+    height: 100%;
     max-height: 100vh;
     overflow: auto;
 }
 
 .closeDialog {
     border: none;
-    padding: 0.7em 1em;
+    padding: 0.7em 2em;
     border-radius: 1em;
     background-color: var(--light-grey);
 
 }
-
+.closeDialog:hover{
+    background-color: var(--funky);
+    color: var(--white);
+    transition: color .3s ease-in, background-color .3s ease-in;
+}
 .dialog h3 {
     grid-row: 1;
     grid-column: 2;
@@ -443,13 +618,3 @@ form >div:nth-of-type(3) img{
     color: var(--grey);
     font-size: 1em;
 }
-
-
-.dialog h1{
-    font-size: 3em;
-    align-self: center;
-    line-height: 1.1em;
-    padding: .5em 0;
-
-}
-
