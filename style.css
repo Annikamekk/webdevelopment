@@ -76,7 +76,7 @@ code {
     padding: .2em;
     border-radius: .4em;
     hyphens: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: monospace;
 }
 
 em {
@@ -295,14 +295,6 @@ header li:nth-of-type(4) img {
 
 
 /* ------------------main----------------- */
-main>h1 {
-    font-family: Poppins;
-    z-index: 1;
-    position: absolute;
-
-    top: 2em;
-    font-size: 5em;
-}
 
 #myBtn {
     z-index: 1;
@@ -324,14 +316,23 @@ main {
     align-items: center;
     flex-direction: column;
     width: 100%;
-
+    position: relative;
+> h1{
+    font-family: Poppins;
+    z-index: 1;
+    position: absolute;
+    top: -2em;
+    font-size: 5em;
+}
     >form {
+        position: absolute;
+        top: -6em;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
         position: absolute;
-        margin-top: -5em;
+       
         width: 40%;
 
         input {
@@ -346,7 +347,21 @@ main {
             font-size: 1.1em;
         }
     }
+    >div {
+        position: absolute;
+        top: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: row;
+        align-items: flex-end;
+       
+        gap: 2em;
+        flex-wrap: wrap;
+        max-width: 60vw;
+    }
 }
+
 
 
 #searchButton {
@@ -364,16 +379,6 @@ main {
     width: 2em;
     height: 2em;
 
-}
-
-main>div {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: row;
-    margin-top: 4em;
-    gap: 2em;
-    flex-wrap: wrap;
 }
 
 /* -------------------buttons onder zoekbalk----------------------- */
@@ -546,8 +551,11 @@ form>section:nth-of-type(1) {
     }
 
     img {
-        width: 40%;
+      
+        max-width: 50%;
+        max-height: 70vh;
         object-fit: contain;
+        justify-self: start;
     }
 }
 
@@ -887,3 +895,97 @@ dialog {
     }
 }
 }
+
+.Q{
+    section{
+        margin-top: 2em;
+    }
+
+    h3 a{
+        color: var(--funky);
+        
+
+    }
+    h3 a::after {
+        content: ""; /* standaard geen inhoud */
+        transition: content 0.3s ease-in-out;
+    }
+    
+    h3 a:hover {
+        background-color: var(--light-grey);
+        color: var(--funky);
+        transition: all 0.3s ease-in-out;
+        border-radius: 0.4em;
+        padding: 0 .7em;
+    }
+    
+    h3 a:hover::after {
+        content: ">>";
+        transition: content 0.3s ease-in-out;
+    }   
+    a:has(img) img:hover{
+    outline: .5em solid var(--funky-light);
+    transition: .3s ease-in-out;
+    } 
+}
+
+.Pre-CSS{
+    >h3{
+        font-size: 2em;
+        border-left: .5em solid var(--funky);
+        padding: 0 .5em ;
+        width: fit-content;
+    }
+    >section:nth-of-type(1){
+        h3:nth-of-type(1){
+            margin-top: 1em;
+            font-weight: normal;
+            border: .1em solid var(--funky);
+            background-color: rgba(167, 203, 203, 0.177);
+
+            padding: 1em;
+        }
+
+    }
+
+    pre {
+        background: var(--funky);
+        padding: 0.5em 1em; 
+        border-radius: 6px;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        white-space: pre-wrap;  
+        margin: 1em 0;
+        display: inline-block;  
+        max-width: 100%;        
+        overflow-x: auto;   
+        height: 20em;
+        width: 20em;
+       
+    }
+    
+    pre code {
+        background-color: transparent;
+        display:block; 
+        text-align: left;
+    }
+    }
+    pre span{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .selector {
+        color: #ffa3ad; /* rood */
+        font-weight: bold;
+      }
+      .property {
+        color: #8b6bc7; /* paars */
+      }
+      .value {
+        color: #a2cdff; /* blauw */
+      }
+      .punctuation {
+        color: #dddddd; /* donkergrijs */
+      }
+
+
