@@ -43,6 +43,9 @@
 html {
     scroll-behavior: smooth;
   }
+  *:focus-visible{
+    outline: .2em solid var(--rood);
+  }
 
 body {
     margin: 0;
@@ -152,6 +155,13 @@ header li:nth-of-type(4) img {
     border: .1em solid var(--border);
 }
 
+#Hackaton >a{
+color: var(--rood);
+background-color: var(--light-grey);
+padding:.5em 1em;
+display: block;
+width: fit-content;
+}
 .leerdoelen>div {
     display: grid;
     grid-row: span 2;
@@ -237,14 +247,12 @@ header li:nth-of-type(4) img {
         margin: .5em 0;
     }
 
-    div:nth-of-type(2) div {
+    div:nth-of-type(2) div{
         display: flex;
         width: 100%;
         gap: 2%;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--funky-light);
-        border-radius: 1em;
+      
+        align-items: start;
 
         img {
 
@@ -252,10 +260,76 @@ header li:nth-of-type(4) img {
             object-fit: contain;
         }
     }
+    div:nth-of-type(3){
+       
+     >div{
+        display: flex;
+        width: 100%;
+        
+        gap: 2em;
+        align-items: start;
+        img{
+            width: 33%;
+            object-fit: contain;
+            max-height: 50vh;
+
+        }
+    }
+}
+}
+
+#toegankelijkheid{
+    scroll-margin-top: 50vh;
+}
+
+#georganiseerd{
+    scroll-margin-top: 50vh;
+}
+#experimenteren{
+    scroll-margin-top: 50vh;
 }
 
 
+#reflectie{
+    scroll-margin-top: 50vh;
+    
+    h3{
+        color: var(--funky);
+        background-color: var(--funky-light);
+        width: fit-content;
+        padding: 0em 2em;
+        border-radius: .5em;
+        margin-top: 1.5em;
+        position: relative;
 
+        font-size: 1.5em;
+    }
+    h3::before {
+        content: "";
+        position: absolute;
+        top: -1em;
+        left: 0;
+        right: 0;
+        width: 93vw;
+        height: .2em;
+        background-color: var(--funky-light);
+    }
+    >div{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3em;
+        section{
+            width: 45%;
+        }
+    }
+
+}
+
+.disclaimer{
+    margin-top: 3em;
+    color: var(--rood);
+    font-weight: 700;
+}
 
 
 
@@ -730,7 +804,7 @@ dialog {
         }
 }
 #DaveBitter {
-    scroll-margin-top: 50vh;
+   
     >section:nth-of-type(1) {
         display: flex;
         flex-direction: column;
@@ -989,3 +1063,15 @@ dialog {
       }
 
 
+
+    .ondersteuning{
+        margin: 2em 0;
+        h3{
+            font-size: 1.4em;
+        }
+        div{
+            display: flex;
+            gap: 3em;
+            margin: 2em 1em;
+        }
+    }
